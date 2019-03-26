@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Camera\CameraFocus.cs" />
     <Compile Include="Assets\Player\Scripts\PlayerMovement.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/carlm/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

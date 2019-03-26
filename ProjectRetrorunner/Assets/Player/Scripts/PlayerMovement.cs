@@ -7,7 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D playerBody;
 
     public Transform playerFeet;
-    public Transform playerHand;
+    public Transform leftHand;
+    public Transform rightHand;
 
     public LayerMask whatIsGround;
 
@@ -26,7 +27,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
     public float maxWallSlideSpeed;
     public float feetRadiusCheck;
-    public float handRadiusCheck;
+    public float leftHandRadiusCheck;
+    public float rightHandRadiusCheck;
     private float jumpTimeCounter;
     public float jumpTime;
 
@@ -50,9 +52,10 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(playerFeet.position, feetRadiusCheck, whatIsGround);
 
         //Kollar ifall spelarens hand befinner sig emot en vägg(Ground)
-        isLeftWallSliding = Physics2D.OverlapCircle(playerHand.position, handRadiusCheck, whatIsGround);
+        isLeftWallSliding = Physics2D.OverlapCircle(leftHand.position, leftHandRadiusCheck, whatIsGround);
+        isRightWallSliding = Physics2D.OverlapCircle(rightHand.position, rightHandRadiusCheck, whatIsGround);
 
-        if (!isLeftWallSliding)
+        if (!isLeftWallSliding || !isRightWallSliding)
         {
             Jump();
         }
@@ -132,6 +135,16 @@ public class PlayerMovement : MonoBehaviour
                 playerBody.velocity = new Vector2(playerBody.velocity.x, -maxWallSlideSpeed);
             }
         }
+
+        else if (isRightWallSliding && playerBody.velocity.y < 0)
+        {
+            isJumping = false;
+
+            if (playerBody.velocity.y < maxWallSlideSpeed)
+            {
+                playerBody.velocity = new Vector2(playerBody.velocity.x, -maxWallSlideSpeed);
+            }
+        }
     }
 
     private void WallJump()
@@ -142,6 +155,13 @@ public class PlayerMovement : MonoBehaviour
 
             playerBody.velocity = new Vector2(wallJumpClimb.x, wallJumpClimb.y);
 
+        }
+
+        else if (Input.GetKeyDown(KeyCode.Space) && isRightWallSliding)
+        {
+            isJumping = true;
+
+            playerBody.velocity = new Vector2(-wallJumpClimb.x, wallJumpClimb.y);
         }
     }
 }
