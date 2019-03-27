@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 883, y: 474}
   m_MaxSize: {x: 16008, y: 14024}
   vertical: 0
-  controlID: 1863
+  controlID: 7975
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -126,10 +126,10 @@ MonoBehaviour:
     y: 0
     width: 1402
     height: 931
-  m_MinSize: {x: 608, y: 474}
-  m_MaxSize: {x: 12008, y: 14024}
+  m_MinSize: {x: 606, y: 474}
+  m_MaxSize: {x: 12006, y: 14024}
   vertical: 1
-  controlID: 1864
+  controlID: 7976
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -152,10 +152,10 @@ MonoBehaviour:
     y: 0
     width: 1402
     height: 563
-  m_MinSize: {x: 608, y: 224}
-  m_MaxSize: {x: 12008, y: 4024}
+  m_MinSize: {x: 606, y: 224}
+  m_MaxSize: {x: 12006, y: 4024}
   vertical: 0
-  controlID: 1865
+  controlID: 7977
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -213,7 +213,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d6fbffff2e0e0000
+      m_ExpandedIDs: d6fbffff2e0e00005c0e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -256,8 +256,8 @@ MonoBehaviour:
     y: 0
     width: 809
     height: 563
-  m_MinSize: {x: 204, y: 224}
-  m_MaxSize: {x: 4004, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 8}
   m_Panes:
   - {fileID: 8}
@@ -296,9 +296,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.3379283, y: 2.9705737, z: 0.116822936}
+    m_Target: {x: 7.7666264, y: 5.54631, z: 0.09434062}
     speed: 2
-    m_Value: {x: 6.3379283, y: 2.9705737, z: 0.116822936}
+    m_Value: {x: 7.7666264, y: 5.54631, z: 0.09434062}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -330,9 +330,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.939291
+    m_Target: 7.1220894
     speed: 2
-    m_Value: 4.939291
+    m_Value: 7.1220894
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -558,19 +558,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/GlowMaterials/TestGlowMats
   m_ViewMode: 1
   m_StartGridSize: 50
   m_LastFolders:
-  - Assets
+  - Assets/GlowMaterials/TestGlowMats
   m_LastFoldersGridSize: 50
   m_LastProjectPath: C:\Users\carlm\OneDrive\Dokument\GitHub\ProjectRetrorunner\ProjectRetrorunner
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 500a0000
-    m_LastClickedID: 2640
+    m_SelectedIDs: d80c0000
+    m_LastClickedID: 3288
     m_ExpandedIDs: 00000000500a0000600a0000e00b0000660d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -624,8 +624,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 520e0000
-    m_LastClickedInstanceID: 3666
+    m_SelectedInstanceIDs: 420e0000
+    m_LastClickedInstanceID: 3650
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000c83200002e3400001032000096320000d0320000e02b000000000000202f00005e300000
     m_RenameOverlay:
@@ -728,8 +728,8 @@ MonoBehaviour:
     y: 0
     width: 502
     height: 931
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 74}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
