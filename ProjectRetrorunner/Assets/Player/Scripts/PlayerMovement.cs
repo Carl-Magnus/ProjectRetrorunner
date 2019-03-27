@@ -149,7 +149,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void WallJump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isLeftWallSliding)
+        if (Input.GetKeyDown(KeyCode.Space) && isLeftWallSliding && !isJumping)
         {
             isJumping = true;
 
@@ -157,7 +157,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        else if (Input.GetKeyDown(KeyCode.Space) && isRightWallSliding)
+        else if (Input.GetKeyDown(KeyCode.Space) && isRightWallSliding && !isJumping)
         {
             isJumping = true;
 
