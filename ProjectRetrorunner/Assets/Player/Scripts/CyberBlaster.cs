@@ -16,19 +16,21 @@ public class CyberBlaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void FixedUpdate()
-    {
         if (Input.GetKeyDown(KeyCode.F))
         {
             Blast();
         }
     }
 
+    private void FixedUpdate()
+    {
+
+    }
+
     private void Blast()
     {
         Instantiate(cyberBlast, firiringPoint.position, firiringPoint.rotation);
     }
+
+    
 }
