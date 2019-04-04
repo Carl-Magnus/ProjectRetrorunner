@@ -134,5 +134,5 @@ MonoBehaviour:
   blasterBody: {fileID: 231923379265766611}
   groundCheck:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 272
   blasterSpeed: 15
