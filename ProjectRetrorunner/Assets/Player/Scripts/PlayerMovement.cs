@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
     //Metod som tar in input ifrån om man rör sig åt vänster eller höger på en horisontella axeln, och multiplicerar värdet med runSpeed. Resulterar i att karaktärern rör sig höger respektive vänster.
     private void CharacterMovement()
     {
-        moveInput = Input.GetAxisRaw("Horizontal");
+        moveInput = Input.GetAxisRaw("Left Stick X axis");
         playerBody.velocity = new Vector2(moveInput * runSpeed, playerBody.velocity.y);
     }
 
@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         //Kollar ifall spelaren har extra hopp kvar. I så fall kan spelaren hoppa igen.
-        if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
+        if (Input.GetButtonDown("A") && extraJumps > 0)
         {
             isJumping = true;
             jumpTimeCounter = jumpTime;
@@ -94,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Kollar om spelaren står på marken, och gör så att man kan hoppa utan extra hopp
-        else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded)
+        else if (Input.GetButtonDown("A") && extraJumps == 0 && isGrounded)
         {
             isJumping = true;
             jumpTimeCounter = jumpTime;
@@ -102,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Sköter så spelarens hopp har olika höjd beroende på hur länge som spelaren håller inne Space
-        if (Input.GetKey(KeyCode.Space) && isJumping)
+        if (Input.GetButton("A") && isJumping)
         {
             if (jumpTimeCounter > 0)
             {
@@ -117,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Gör så att spelaren slutar att hoppa ifall man släpper Space
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetButtonUp("A"))
         {
             isJumping = false;
         }
@@ -149,7 +149,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void WallJump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isLeftWallSliding && !isJumping)
+        if (Input.GetButtonDown("A") && isLeftWallSliding && !isJumping)
         {
             isJumping = true;
 
@@ -157,7 +157,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        else if (Input.GetKeyDown(KeyCode.Space) && isRightWallSliding && !isJumping)
+        else if (Input.GetButtonDown("A") && isRightWallSliding && !isJumping)
         {
             isJumping = true;
 
