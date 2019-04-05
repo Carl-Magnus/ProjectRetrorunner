@@ -34,8 +34,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isJumping;
     private bool isGrounded;
-    private bool isLeftWallSliding;
-    private bool isRightWallSliding;
+    public bool isLeftWallSliding;
+    public bool isRightWallSliding;
 
     // Start is called before the first frame update
     void Start()
@@ -54,11 +54,6 @@ public class PlayerMovement : MonoBehaviour
         //Kollar ifall spelarens hand befinner sig emot en vägg(Ground)
         isLeftWallSliding = Physics2D.OverlapCircle(leftHand.position, leftHandRadiusCheck, whatIsGround);
         isRightWallSliding = Physics2D.OverlapCircle(rightHand.position, rightHandRadiusCheck, whatIsGround);
-
-        if (!isLeftWallSliding || !isRightWallSliding)
-        {
-            Jump();
-        }
 
         if (isGrounded)
         {
@@ -82,32 +77,23 @@ public class PlayerMovement : MonoBehaviour
         playerBody.velocity = new Vector2(moveInput * runSpeed, playerBody.velocity.y);
     }
 
-    //Metod för att sköta spelarens förmåga att hoppa
     private void Jump()
     {
-        //Kollar ifall spelaren har extra hopp kvar. I så fall kan spelaren hoppa igen.
-        if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
-        {
-            isJumping = true;
-            jumpTimeCounter = jumpTime;
-            playerBody.velocity = Vector2.up * jumpForce;
-            extraJumps--;
-        }
+        playerBody.velocity = Vector2.up * jumpForce;
+    }
 
-        //Kollar om spelaren står på marken, och gör så att man kan hoppa utan extra hopp
-        else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded)
-        {
-            isJumping = true;
-            jumpTimeCounter = jumpTime;
-            playerBody.velocity = Vector2.up * jumpForce;
-        }
+    public void StopJumping()
+    {
+        isJumping = false;
+    }
 
-        //Sköter så spelarens hopp har olika höjd beroende på hur länge som spelaren håller inne Space
-        if (Input.GetKey(KeyCode.Space) && isJumping)
+    public void VariableJump()
+    {
+        if (isJumping)
         {
             if (jumpTimeCounter > 0)
             {
-                playerBody.velocity = Vector2.up * jumpForce;
+                Jump();
                 jumpTimeCounter -= Time.deltaTime;
             }
 
@@ -116,11 +102,27 @@ public class PlayerMovement : MonoBehaviour
                 isJumping = false;
             }
         }
+    }
 
-        //Gör så att spelaren slutar att hoppa ifall man släpper Space
-        if (Input.GetKeyUp(KeyCode.Space))
+    public void JumpFromGround()
+    {
+        if (isGrounded)
         {
-            isJumping = false;
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
+            Jump();
+        }
+
+    }
+
+    public void ExtraJump()
+    {
+        if (extraJumps > 0)
+        {
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
+            Jump();
+            extraJumps--;
         }
     }
 

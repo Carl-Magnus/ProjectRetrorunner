@@ -6,24 +6,26 @@ public class InputManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    bool buttonA = Input.GetButtonDown("A");
-    bool buttonB = Input.GetButtonDown("B");
-    bool buttonX = Input.GetButtonDown("X");
-    bool buttonY = Input.GetButtonDown("Y");
-    bool leftBumper = Input.GetButtonDown("Left Bumper");
-    bool rightBumper = Input.GetButtonDown("Right Bumper");
-    bool backButton = Input.GetButtonDown("Back Button");
-    bool startButton = Input.GetButtonDown("Start Button");
-    bool leftStickClick = Input.GetButtonDown("Left Stick Click");
-    bool rightStickClick = Input.GetButtonDown("Right Stick Click");
-    float leftStickXAxis = Input.GetAxisRaw("Left Stick X Axis");
-    float leftStickYAxis = Input.GetAxisRaw("Left Stick Y Axis");
-    float rightStickXAxis = Input.GetAxisRaw("Right Stick X Axis");
-    float rightStickYAxis = Input.GetAxisRaw("Right Stick Y Axis");
-    float dPadXAxis = Input.GetAxisRaw("D-Pad X Axis");
-    float dPadYAxis = Input.GetAxisRaw("D-Pad Y Axis");
-    float leftTrigger = Input.GetAxisRaw("Left Trigger");
-    float rightTrigger = Input.GetAxisRaw("Right Trigger");
+    public static bool buttonA;
+    public static bool buttonUpA;
+    public static bool buttonBasicA;
+    bool buttonB;
+    bool buttonX;
+    bool buttonY;
+    bool leftBumper;
+    bool rightBumper;
+    bool backButton;
+    bool startButton;
+    bool leftStickClick;
+    bool rightStickClick;
+    float leftStickXAxis;
+    float leftStickYAxis;
+    float rightStickXAxis;
+    float rightStickYAxis;
+    float dPadXAxis;
+    float dPadYAxis;
+    float leftTrigger;
+    float rightTrigger;
 
     void Start()
     {
@@ -33,7 +35,26 @@ public class InputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        buttonA = Input.GetButtonDown("Jump");
+        buttonUpA = Input.GetKeyUp("Jump");
+        buttonBasicA = Input.GetKey("Jump");
+        buttonB = Input.GetButtonDown("B");
+        buttonX = Input.GetButtonDown("X");
+        buttonY = Input.GetButtonDown("Y");
+        leftBumper = Input.GetButtonDown("Left Bumper");
+        rightBumper = Input.GetButtonDown("Right Bumper");
+        backButton = Input.GetButtonDown("Back Button");
+        startButton = Input.GetButtonDown("Start Button");
+        leftStickClick = Input.GetButtonDown("Left Stick Click");
+        rightStickClick = Input.GetButtonDown("Right Stick Click");
+        leftStickXAxis = Input.GetAxisRaw("Left Stick X Axis");
+        leftStickYAxis = Input.GetAxisRaw("Left Stick Y Axis");
+        rightStickXAxis = Input.GetAxisRaw("Right Stick X Axis");
+        rightStickYAxis = Input.GetAxisRaw("Right Stick Y Axis");
+        dPadXAxis = Input.GetAxisRaw("D-Pad X Axis");
+        dPadYAxis = Input.GetAxisRaw("D-Pad Y Axis");
+        leftTrigger = Input.GetAxisRaw("Left Trigger");
+        rightTrigger = Input.GetAxisRaw("Right Trigger");
     }
 
 
