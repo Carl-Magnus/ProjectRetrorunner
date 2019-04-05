@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 642671582438415153}
   - component: {fileID: 642671582438415152}
   - component: {fileID: 642671582438415155}
+  - component: {fileID: 1556277786907978462}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -178,6 +179,8 @@ MonoBehaviour:
   leftHandRadiusCheck: 0.1
   rightHandRadiusCheck: 0.1
   jumpTime: 0.3
+  isLeftWallSliding: 0
+  isRightWallSliding: 0
 --- !u!95 &642671582438415152
 Animator:
   serializedVersion: 3
@@ -212,6 +215,20 @@ MonoBehaviour:
   firiringPoint: {fileID: 642671583680695844}
   cyberBlast: {fileID: 5833219819818551876, guid: 5394e1553f3cda242b20f94999901b71,
     type: 3}
+--- !u!114 &1556277786907978462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642671582438415149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 130bdd0fba66c1643bf04ccdc4c0b55e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 642671582438415153}
+  blaster: {fileID: 642671582438415155}
 --- !u!1 &642671582466019916
 GameObject:
   m_ObjectHideFlags: 0
