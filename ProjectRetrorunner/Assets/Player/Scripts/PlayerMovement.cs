@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
             extraJumps = jumpReset;
         }
 
-        WallJump();
+        //WallJump();
     }
 
     private void FixedUpdate()
@@ -68,6 +68,8 @@ public class PlayerMovement : MonoBehaviour
         CharacterMovement();
         WallSlide();
         FlipCharacter();
+        WallJump();
+
     }
 
     //Metod som tar in input ifrån om man rör sig åt vänster eller höger på en horisontella axeln, och multiplicerar värdet med runSpeed. Resulterar i att karaktärern rör sig höger respektive vänster.
@@ -161,7 +163,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isJumping = true;
 
-            playerBody.velocity = new Vector2(wallJumpClimb.x, wallJumpClimb.y);
+            playerBody.velocity = new Vector2(jumpForce * wallJumpClimb.x, wallJumpClimb.y);
 
         }
 
@@ -169,7 +171,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isJumping = true;
 
-            playerBody.velocity = new Vector2(-wallJumpClimb.x, wallJumpClimb.y);
+            playerBody.velocity = new Vector2(jumpForce * -wallJumpClimb.x, wallJumpClimb.y);
         }
     }
 }

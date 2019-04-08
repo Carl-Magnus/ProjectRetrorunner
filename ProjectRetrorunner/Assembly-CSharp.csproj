@@ -66,6 +66,8 @@
     <Compile Include="Assets\Player\Scripts\CyberBlaster.cs" />
     <Compile Include="Assets\Player\Scripts\PlayerManager.cs" />
     <Compile Include="Assets\Player\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\rainGenerator.cs" />
+    <Compile Include="Assets\rainMovement.cs" />
     <None Include="Assets\Shaders\CyberGlow.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/carlm/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
