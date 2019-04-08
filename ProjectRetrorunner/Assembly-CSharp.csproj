@@ -63,6 +63,8 @@
     <Compile Include="Assets\blasterMovement.cs" />
     <Compile Include="Assets\Camera\CameraFocus.cs" />
     <Compile Include="Assets\InputManager.cs" />
+    <Compile Include="Assets\KeyboardInputManager.cs" />
+    <Compile Include="Assets\ModeManager.cs" />
     <Compile Include="Assets\Player\Scripts\CyberBlaster.cs" />
     <Compile Include="Assets\Player\Scripts\PlayerManager.cs" />
     <Compile Include="Assets\Player\Scripts\PlayerMovement.cs" />
