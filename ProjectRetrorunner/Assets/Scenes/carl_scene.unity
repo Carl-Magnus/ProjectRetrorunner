@@ -127,12 +127,12 @@ PrefabInstance:
     - target: {fileID: 642671582438415150, guid: 2947e41f02c9181499063698c7aedac1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.31
+      value: 7.316
       objectReference: {fileID: 0}
     - target: {fileID: 642671582438415150, guid: 2947e41f02c9181499063698c7aedac1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.49
+      value: 2.533
       objectReference: {fileID: 0}
     - target: {fileID: 642671582438415150, guid: 2947e41f02c9181499063698c7aedac1,
         type: 3}
@@ -178,6 +178,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 642671582438415151, guid: 2947e41f02c9181499063698c7aedac1,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.77418625
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2947e41f02c9181499063698c7aedac1, type: 3}
@@ -776,6 +781,28 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1857094676 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 642671582438415149, guid: 2947e41f02c9181499063698c7aedac1,
+    type: 3}
+  m_PrefabInstance: {fileID: 325909449}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &1857094683
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857094676}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &2122026293
 GameObject:
   m_ObjectHideFlags: 0
