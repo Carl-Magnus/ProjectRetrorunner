@@ -8,6 +8,8 @@ public class rainMovement : MonoBehaviour
 
     private Vector2 direction;
 
+    public ParticleSystem splash;
+
     public float fallSpeed;
 
     // Start is called before the first frame update
@@ -20,5 +22,15 @@ public class rainMovement : MonoBehaviour
     void Update()
     {
         body.velocity = new Vector2(direction.x, fallSpeed * direction.y);
+    }
+
+    private void FixedUpdate()
+    {
+        
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        splash.Play();
     }
 }
