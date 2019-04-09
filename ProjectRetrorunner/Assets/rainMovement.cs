@@ -34,3 +34,4 @@ public class rainMovement : MonoBehaviour
         splash.Play();
     }
 }
+
