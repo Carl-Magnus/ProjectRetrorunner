@@ -16,6 +16,7 @@ public class rainMovement : MonoBehaviour
     void Start()
     {
         direction = new Vector2(0, -1);
+        
     }
 
     // Update is called once per frame
@@ -31,7 +32,7 @@ public class rainMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        splash.Play();
+
     }
 }
 

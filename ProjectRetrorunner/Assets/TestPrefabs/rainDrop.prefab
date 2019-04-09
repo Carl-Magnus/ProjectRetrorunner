@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6637241521665187817}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.42, y: 14.39, z: -0.07892799}
+  m_LocalPosition: {x: 7.42, y: 14.39, z: -0.07892799}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2645933337066599330}
@@ -152,10 +152,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4406969696910261268}
     m_Modifications:
-    - target: {fileID: 155893078809902979, guid: 371e41795aa43fe4fa0c184fff6ec02e,
+    - target: {fileID: 155893078809902989, guid: 371e41795aa43fe4fa0c184fff6ec02e,
         type: 3}
-      propertyPath: m_Name
-      value: RainSplash
+      propertyPath: EmissionModule.enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 155893078809902988, guid: 371e41795aa43fe4fa0c184fff6ec02e,
         type: 3}
@@ -211,6 +211,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 155893078809902979, guid: 371e41795aa43fe4fa0c184fff6ec02e,
+        type: 3}
+      propertyPath: m_Name
+      value: RainSplash
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 371e41795aa43fe4fa0c184fff6ec02e, type: 3}
