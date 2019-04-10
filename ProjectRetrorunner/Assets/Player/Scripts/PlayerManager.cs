@@ -21,6 +21,8 @@ public class PlayerManager : MonoBehaviour
             JumpLogic();
         }
 
+        FlipCharacter();
+
         BlasterLogic();
     }
 
@@ -45,6 +47,19 @@ public class PlayerManager : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             movement.StopJumping();
+        }
+    }
+
+    private void FlipCharacter()
+    {
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            movement.FlipCharacterRight();
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            movement.FlipCharacterLeft();
         }
     }
 

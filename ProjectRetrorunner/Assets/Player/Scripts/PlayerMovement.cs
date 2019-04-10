@@ -69,7 +69,6 @@ public class PlayerMovement : MonoBehaviour
     {
         CharacterMovement();
         WallSlide();
-        FlipCharacter();
     }
 
     //Metod som tar in input ifrån om man rör sig åt vänster eller höger på en horisontella axeln, och multiplicerar värdet med runSpeed. Resulterar i att karaktärern rör sig höger respektive vänster.
@@ -128,9 +127,14 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void FlipCharacter()
+    public void FlipCharacterLeft()
     {
+        transform.eulerAngles = new Vector3(0, 180, 0);
+    }
 
+    public void FlipCharacterRight()
+    {
+        transform.eulerAngles = new Vector3(0, 0, 0);
     }
 
     //Metod som saknar ner spelaren om hans hand kolliderar med en vägg och han rör sig nedåt
