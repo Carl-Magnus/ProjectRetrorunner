@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 231923379265766611}
   - component: {fileID: 3507153697481237533}
   - component: {fileID: 6304630300423424424}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: cyberBlast
-  m_TagString: Untagged
+  m_TagString: Blast
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

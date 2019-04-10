@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 642671581664277846}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: leftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 642671582233987689}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: feetPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,8 @@ GameObject:
   - component: {fileID: 642671582438415152}
   - component: {fileID: 642671582438415155}
   - component: {fileID: 430429865554487318}
-  m_Layer: 0
+  - component: {fileID: 7687303530406016344}
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -90,7 +91,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642671582438415149}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.31, y: 2.49, z: 0}
+  m_LocalPosition: {x: 7.486, y: 2.484, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 642671583503973314}
@@ -229,6 +230,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 642671582438415153}
   blaster: {fileID: 642671582438415155}
+--- !u!58 &7687303530406016344
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642671582438415149}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5167596
 --- !u!1 &642671582466019916
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 642671582466019919}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CameraFocus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +285,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 642671583271014240}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: rightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 642671583503973314}
   - component: {fileID: 642671583503973317}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: testBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +394,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 642671583680695844}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FiringPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

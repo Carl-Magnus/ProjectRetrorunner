@@ -27,8 +27,20 @@ public class blasterMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.collider.tag == "Rain")
+        {
+            Physics2D.IgnoreLayerCollision(11, 12);
+        }
 
-        Destroy(gameObject);
+        else if (collision.collider.tag == "Player")
+        {
+            Physics2D.IgnoreLayerCollision(10, 12);
+        }
+
+        else
+        {
+            Destroy(gameObject);
+        }
 
     }
 }

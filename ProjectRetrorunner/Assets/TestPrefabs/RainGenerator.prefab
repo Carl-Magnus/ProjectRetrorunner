@@ -45,4 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rainDrop: {fileID: 6637241521665187817, guid: 97bf5cc411157734aabb55dbcd5e9a82,
     type: 3}
-  spawnTimer: 0.1
+  maxRainAmount: 300
+  spawnTimer: 0.05

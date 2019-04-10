@@ -10,8 +10,10 @@ public class rainGenerator : MonoBehaviour
 
     private Random rnd;
 
+    public float maxRainAmount;
     public float spawnTimer;
     private float resetTimer;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +32,7 @@ public class rainGenerator : MonoBehaviour
 
     private void GenerateRain()
     {
-        for (int i = 0; i < 150; i++)
+        for (int i = 0; i < maxRainAmount; i++)
         {
             if (spawnTimer <= 0)
             {
