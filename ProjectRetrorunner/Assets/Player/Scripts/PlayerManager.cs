@@ -19,8 +19,8 @@ public class PlayerManager : MonoBehaviour
         if (!movement.isLeftWallSliding && !movement.isRightWallSliding)
         {
             JumpLogic();
+            
         }
-
         BlasterLogic();
     }
 
@@ -46,6 +46,12 @@ public class PlayerManager : MonoBehaviour
         {
             movement.StopJumping();
         }
+    }
+
+    private void DashLogic()
+    {
+        
+
     }
 
     //Logik för att spelaren ska kunna skjuta en CyberBlast

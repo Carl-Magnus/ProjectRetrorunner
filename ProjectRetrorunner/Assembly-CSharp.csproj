@@ -69,47 +69,11 @@
     <Compile Include="Assets\Player\Scripts\PlayerManager.cs" />
     <Compile Include="Assets\Player\Scripts\PlayerMovement.cs" />
     <None Include="Assets\Shaders\CyberGlow.shader" />
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.2D.Animation.Runtime">
       <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.InternalAPIEngineBridge.001">
-      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Common.Runtime">
-      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Animation.Editor">
-      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Triangle.Runtime">
-      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.2D.Triangle.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Common.Editor">
-      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.IK.Editor">
       <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
@@ -117,11 +81,47 @@
     <Reference Include="Unity.2D.IK.Runtime">
       <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="PsdPlugin">
       <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.CollabProxy.Editor">
+      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.Psdimporter.Editor">
       <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEngineBridge.001">
+      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Runtime">
+      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Animation.Editor">
+      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Triangle.Runtime">
+      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.2D.Triangle.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Editor">
+      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.DataPrivacy">
+      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+      <HintPath>C:/Users/gusta/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
