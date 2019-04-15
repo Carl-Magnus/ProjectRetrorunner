@@ -21,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
     public int extraJumps;
     private int jumpReset;
 
-    private float basicRunSpeed;
     private float moveInput;
     private float wallDirectionX;
     public float runSpeed;
@@ -38,19 +37,12 @@ public class PlayerMovement : MonoBehaviour
     public bool isLeftWallSliding;
     public bool isRightWallSliding;
 
-    public float dashSpeed;
-    private float dashTime;
-    public float startDashTime;
-    private int direction;
-
     // Start is called before the first frame update
     void Start()
     {
         //Hänvisar till spelarens egen animation controller
         anim = GetComponent<Animator>();
         jumpReset = extraJumps;
-        dashTime = startDashTime;
-        basicRunSpeed = runSpeed;
     }
 
     // Update is called once per frame
@@ -69,14 +61,14 @@ public class PlayerMovement : MonoBehaviour
         }
 
         WallJump();
+
+        //WallJump();
     }
 
     private void FixedUpdate()
     {
         CharacterMovement();
         WallSlide();
-        FlipCharacter();
-        Dash();
     }
 
     //Metod som tar in input ifrån om man rör sig åt vänster eller höger på en horisontella axeln, och multiplicerar värdet med runSpeed. Resulterar i att karaktärern rör sig höger respektive vänster.
@@ -96,7 +88,6 @@ public class PlayerMovement : MonoBehaviour
         isJumping = false;
     }
 
-   
     public void VariableJump()
     {
         if (isJumping)
@@ -186,29 +177,5 @@ public class PlayerMovement : MonoBehaviour
 
             playerBody.velocity = new Vector2(-wallJumpClimb.x, wallJumpClimb.y);
         }
-    }
-
-    public void Dash()
-    {
-        if(isGrounded)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                runSpeed *= dashSpeed;
-
-            }
-
-            else if (Input.GetKeyDown(KeyCode.Q))
-            {
-                runSpeed *= dashSpeed;
-            }
-
-            else
-            {
-                runSpeed = basicRunSpeed;
-            }
-        }
-
-       
     }
 }

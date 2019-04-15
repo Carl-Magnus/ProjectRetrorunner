@@ -19,7 +19,6 @@ public class PlayerManager : MonoBehaviour
         if (!movement.isLeftWallSliding && !movement.isRightWallSliding)
         {
             JumpLogic();
-            
         }
 
         FlipCharacter();
@@ -51,7 +50,6 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-
     private void FlipCharacter()
     {
         if (Input.GetKeyDown(KeyCode.D))
@@ -63,13 +61,6 @@ public class PlayerManager : MonoBehaviour
         {
             movement.FlipCharacterLeft();
         }
-    }
-
-    private void DashLogic()
-    {
-        
-
-
     }
 
     //Logik för att spelaren ska kunna skjuta en CyberBlast
