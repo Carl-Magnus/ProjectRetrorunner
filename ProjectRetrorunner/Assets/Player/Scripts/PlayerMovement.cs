@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public int extraJumps;
     private int jumpReset;
 
+    private float basicRunSpeed;
     private float moveInput;
     private float wallDirectionX;
     public float runSpeed;
@@ -49,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         jumpReset = extraJumps;
         dashTime = startDashTime;
+        basicRunSpeed = runSpeed;
     }
 
     // Update is called once per frame
@@ -67,7 +69,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         WallJump();
-        
 
     }
 
@@ -77,7 +78,6 @@ public class PlayerMovement : MonoBehaviour
         WallSlide();
         FlipCharacter();
         Dash();
-
     }
 
     //Metod som tar in input ifrån om man rör sig åt vänster eller höger på en horisontella axeln, och multiplicerar värdet med runSpeed. Resulterar i att karaktärern rör sig höger respektive vänster.
@@ -190,12 +190,18 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                playerBody.velocity = Vector2.right * dashSpeed;
+                runSpeed *= dashSpeed;
+
             }
 
             else if (Input.GetKeyDown(KeyCode.Q))
             {
-                playerBody.velocity = Vector2.left * dashSpeed;
+                runSpeed *= dashSpeed;
+            }
+
+            else
+            {
+                runSpeed = basicRunSpeed;
             }
         }
 
