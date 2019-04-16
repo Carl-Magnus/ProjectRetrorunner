@@ -1337,6 +1337,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4311874409295270847, guid: 227352625c924d144983dd58482ab578,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 3479875139046115363, guid: 227352625c924d144983dd58482ab578,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1396,7 +1401,17 @@ PrefabInstance:
         type: 3}
       propertyPath: groundDetection
       value: 
-      objectReference: {fileID: 480027829}
+      objectReference: {fileID: 986637458}
+    - target: {fileID: 2317228259414518117, guid: 227352625c924d144983dd58482ab578,
+        type: 3}
+      propertyPath: distance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216114027314247788, guid: 227352625c924d144983dd58482ab578,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 227352625c924d144983dd58482ab578, type: 3}
 --- !u!1 &857945684
@@ -1718,6 +1733,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &986637458 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4188953940343098442, guid: 227352625c924d144983dd58482ab578,
+    type: 3}
+  m_PrefabInstance: {fileID: 839833901}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1028444331
 PrefabInstance:
   m_ObjectHideFlags: 0

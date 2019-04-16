@@ -6,6 +6,7 @@ public class PlayerManager : MonoBehaviour
 {
     public PlayerMovement movement;
     public CyberBlaster blaster;
+    public PlayerAttack attack;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,8 @@ public class PlayerManager : MonoBehaviour
         FlipCharacter();
 
         BlasterLogic();
+
+        AttackLogic();
     }
 
     //Logik för att få spelaren att hoppa
@@ -70,5 +73,10 @@ public class PlayerManager : MonoBehaviour
         {
             blaster.Blast();
         }
+    }
+
+    public void AttackLogic()
+    {
+        attack.Attack();
     }
 }

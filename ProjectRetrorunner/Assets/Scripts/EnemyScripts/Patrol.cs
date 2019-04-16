@@ -20,6 +20,8 @@ public class Patrol : MonoBehaviour
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
+        Death();
+
         RaycastHit2D groundDetect = Physics2D.Raycast(groundDetection.position, Vector2.down, distance);
         if (groundDetect.collider == false)
         {
@@ -39,5 +41,13 @@ public class Patrol : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+    }
+
+    public void Death()
+    {
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

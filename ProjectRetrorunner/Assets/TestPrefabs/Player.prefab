@@ -232,6 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 642671582438415153}
   blaster: {fileID: 642671582438415155}
+  attack: {fileID: 6209706545316324679}
 --- !u!58 &7687303530406016344
 CircleCollider2D:
   m_ObjectHideFlags: 0

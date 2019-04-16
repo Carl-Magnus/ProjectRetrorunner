@@ -60,17 +60,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\blasterMovement.cs" />
-    <Compile Include="Assets\Camera\CameraFocus.cs" />
-    <Compile Include="Assets\Enemies\Patrol.cs" />
-    <Compile Include="Assets\InputManager.cs" />
-    <Compile Include="Assets\Player\Scripts\CyberBlaster.cs" />
-    <Compile Include="Assets\Player\Scripts\PlayerAttack.cs" />
-    <Compile Include="Assets\Player\Scripts\PlayerManager.cs" />
-    <Compile Include="Assets\Player\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\rainGenerator.cs" />
-    <Compile Include="Assets\rainMovement.cs" />
-    <None Include="Assets\Shaders\CyberGlow.shader" />
+    <Compile Include="Assets\Scripts\CameraScripts\CameraFocus.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\Patrol.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\blasterMovement.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\CyberBlaster.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\InputManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerAttack.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\RainScripts\rainGenerator.cs" />
+    <Compile Include="Assets\Scripts\RainScripts\rainMovement.cs" />
+    <None Include="Assets\Scripts\ShaderScripts\CyberGlow.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/carlm/OneDrive/Dokument/GitHub/ProjectRetrorunner/ProjectRetrorunner/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

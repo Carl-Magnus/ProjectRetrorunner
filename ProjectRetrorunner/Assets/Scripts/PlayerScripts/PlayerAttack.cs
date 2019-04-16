@@ -25,7 +25,6 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Attack();
       
     }
 
@@ -35,7 +34,7 @@ public class PlayerAttack : MonoBehaviour
         Gizmos.DrawWireSphere(attackPosition.position, attackRange);
     }
 
-    private void Attack()
+    public void Attack()
     {
         if (timeBetweenAttack <= 0)
         {
