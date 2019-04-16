@@ -7,9 +7,14 @@ public class Patrol : MonoBehaviour
     public float speed;
     public float distance;
 
+    public int health;
+
     private bool movingRight = true;
 
     public Transform groundDetection;
+
+    public LayerMask whatIsGround;
+    
 
     private void Update()
     {
@@ -29,5 +34,10 @@ public class Patrol : MonoBehaviour
                 movingRight = true;
             }
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
     }
 }
