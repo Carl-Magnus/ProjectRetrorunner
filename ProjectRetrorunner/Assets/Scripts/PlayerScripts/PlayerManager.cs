@@ -27,6 +27,8 @@ public class PlayerManager : MonoBehaviour
         BlasterLogic();
 
         AttackLogic();
+
+        DashLogic();
     }
 
     //Logik för att få spelaren att hoppa
@@ -72,6 +74,14 @@ public class PlayerManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             blaster.Blast();
+        }
+    }
+
+    private void DashLogic()
+    {
+        if (Input.GetKeyDown(KeyCode.G) && !movement.isDashing)
+        {
+            movement.isDashing = true;
         }
     }
 

@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private float moveInput;
     private float wallDirectionX;
     public float runSpeed;
+    private float startRunSpeed;
     public float jumpForce;
     public float maxWallSlideSpeed;
     public float feetRadiusCheck;
@@ -31,9 +32,13 @@ public class PlayerMovement : MonoBehaviour
     public float rightHandRadiusCheck;
     private float jumpTimeCounter;
     public float jumpTime;
+    public float dashTime;
+    public float dashSpeed;
+    private float dashTimeReset;
 
     private bool isJumping;
     private bool isGrounded;
+    public bool isDashing;
     public bool isLeftWallSliding;
     public bool isRightWallSliding;
 
@@ -43,6 +48,8 @@ public class PlayerMovement : MonoBehaviour
         //Hänvisar till spelarens egen animation controller
         anim = GetComponent<Animator>();
         jumpReset = extraJumps;
+        dashTimeReset = dashTime;
+        startRunSpeed = runSpeed;
     }
 
     // Update is called once per frame
@@ -61,8 +68,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         WallJump();
-
-        //WallJump();
+        Dash();
     }
 
     private void FixedUpdate()
@@ -157,6 +163,26 @@ public class PlayerMovement : MonoBehaviour
             if (playerBody.velocity.y < maxWallSlideSpeed)
             {
                 playerBody.velocity = new Vector2(playerBody.velocity.x, -maxWallSlideSpeed);
+            }
+        }
+    }
+
+    public void Dash()
+    {
+        if (isDashing)
+        {
+            if (dashTime > 0)
+            {
+                dashTime -= Time.deltaTime;
+
+                runSpeed = dashSpeed;
+            }
+
+            else
+            {
+                runSpeed = startRunSpeed;
+                isDashing = false;
+                dashTime = dashTimeReset;
             }
         }
     }

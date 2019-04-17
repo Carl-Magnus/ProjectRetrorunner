@@ -14,6 +14,8 @@ public class Patrol : MonoBehaviour
     public Transform groundDetection;
 
     public LayerMask whatIsGround;
+
+    public GameObject bloodSplatter;
     
 
     private void Update()
@@ -40,6 +42,7 @@ public class Patrol : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        Instantiate(bloodSplatter, transform.position, Quaternion.identity);
         health -= damage;
     }
 

@@ -8,6 +8,8 @@ public class blasterMovement : MonoBehaviour
     public LayerMask groundCheck;
 
     public float blasterSpeed;
+
+    public int blasterDamage;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,11 @@ public class blasterMovement : MonoBehaviour
 
     }
 
+    private void EnemyHit()
+    {
+        
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Rain")
@@ -35,6 +42,12 @@ public class blasterMovement : MonoBehaviour
         else if (collision.collider.tag == "Player")
         {
             Physics2D.IgnoreLayerCollision(10, 12);
+        }
+
+        else if (collision.collider.tag == "Enemy")
+        {
+            collision.collider.GetComponent<Patrol>().TakeDamage(blasterDamage);
+            Destroy(gameObject);
         }
 
         else

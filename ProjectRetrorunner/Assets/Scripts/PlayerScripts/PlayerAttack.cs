@@ -42,6 +42,7 @@ public class PlayerAttack : MonoBehaviour
 
             if (Input.GetKey(KeyCode.L))
             {
+                playerAnim.SetTrigger("attack");
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, whaIsEnemy);
 
                 for (int i = 0; i < enemiesToDamage.Length; i++)

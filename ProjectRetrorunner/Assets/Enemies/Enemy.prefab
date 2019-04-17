@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8683553429878681810}
   - component: {fileID: 2317228259414518117}
   - component: {fileID: 1255122874497281687}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.8773585, g: 0.7774989, b: 0.12829298, a: 1}
+  m_Color: {r: 0.735849, g: 0.03818085, b: 0.084055275, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,7 +97,12 @@ MonoBehaviour:
   speed: 3
   distance: 0
   health: 30
-  groundDetection: {fileID: 0}
+  groundDetection: {fileID: 4188953940343098442}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  bloodSplatter: {fileID: 7703626408018244840, guid: 193b4e1ebf316df42aaece4b2b2b72d6,
+    type: 3}
 --- !u!61 &1255122874497281687
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -133,7 +138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4188953940343098442}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Ground Detection
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}

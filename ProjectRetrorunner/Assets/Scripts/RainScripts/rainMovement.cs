@@ -8,8 +8,6 @@ public class rainMovement : MonoBehaviour
 
     private Vector2 direction;
 
-    public ParticleSystem splash;
-
     public GameObject splashEffect;
 
     public float fallSpeed;
@@ -61,7 +59,7 @@ public class rainMovement : MonoBehaviour
 
     private void CreateSplash()
     {
-        Instantiate(splashEffect, gameObject.transform);
+        Instantiate(splashEffect, transform.position, Quaternion.identity);
     }
 }
 
