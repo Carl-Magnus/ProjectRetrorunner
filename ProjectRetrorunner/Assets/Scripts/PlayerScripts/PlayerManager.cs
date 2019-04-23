@@ -82,6 +82,7 @@ public class PlayerManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G) && !movement.isDashing)
         {
             movement.isDashing = true;
+            attack.DashAttack();
         }
     }
 

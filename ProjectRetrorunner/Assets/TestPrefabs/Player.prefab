@@ -103,6 +103,7 @@ Transform:
   - {fileID: 642671583680695844}
   - {fileID: 7806656189844086914}
   - {fileID: 7213521136952611975}
+  - {fileID: 6161595450236152840}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -266,13 +267,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPosition: {fileID: 7806656189844086914}
+  dashAttackPosition: {fileID: 0}
   whaIsEnemy:
     serializedVersion: 2
     m_Bits: 8192
   playerAnim: {fileID: 0}
   startTimeBetweenAttack: 0.1
   attackRange: 0.54
+  dashAttackRange: 0
   damage: 10
+  playerMovement: {fileID: 0}
 --- !u!1 &642671582466019916
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,3 +555,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &5696140991212795789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6161595450236152840}
+  m_Layer: 10
+  m_Name: DashAttackZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6161595450236152840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5696140991212795789}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 642671582438415150}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

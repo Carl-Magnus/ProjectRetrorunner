@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public Transform attackPosition;
+    public Transform dashAttackPosition;
 
     public LayerMask whaIsEnemy;
 
@@ -14,7 +15,11 @@ public class PlayerAttack : MonoBehaviour
     public float startTimeBetweenAttack;
     public float attackRange;
 
+    public float dashAttackRange;
+
     public int damage;
+
+    public PlayerMovement playerMovement;
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +60,21 @@ public class PlayerAttack : MonoBehaviour
         else
         {
             timeBetweenAttack -= Time.deltaTime;
+        }
+    }
+
+    public void DashAttack()
+    {
+        if(playerMovement.isDashing == true)
+        {
+            
+            Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(dashAttackPosition.position, dashAttackRange, whaIsEnemy);
+
+            for (int i = 0; i < enemiesToDamage.Length; i++)
+            {
+                enemiesToDamage[i].GetComponent<Patrol>().TakeDamage(damage);
+                enemiesToDamage[i].GetComponent<Collider2D>().enabled = false;
+            }
         }
     }
 }
