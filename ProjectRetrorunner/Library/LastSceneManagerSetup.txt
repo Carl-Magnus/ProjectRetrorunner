@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/gustav_scene.unity
+- path: Assets/Scenes/carl_scene.unity
   isLoaded: 1
   isActive: 1

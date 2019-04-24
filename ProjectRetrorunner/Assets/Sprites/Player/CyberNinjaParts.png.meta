@@ -1,0 +1,393 @@
+fileFormatVersion: 2
+guid: f6686b6f186d6b54ab0ed11e109578ab
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: CyberNinjaParts_0
+    21300002: CyberNinjaParts_1
+    21300004: CyberNinjaParts_2
+    21300006: CyberNinjaParts_3
+    21300008: CyberNinjaParts_4
+    21300010: CyberNinjaParts_5
+    21300012: CyberNinjaParts_6
+    21300014: CyberNinjaParts_7
+    21300016: CyberNinjaParts_8
+    21300018: CyberNinjaParts_9
+    21300020: CyberNinjaParts_10
+    21300022: CyberNinjaParts_11
+    21300024: CyberNinjaParts_12
+    21300026: CyberNinjaParts_13
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CyberNinjaParts_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 223
+        width: 18
+        height: 29
+      alignment: 9
+      pivot: {x: 0.4368744, y: 0.8918152}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f720f85516c622f439e2c4bcfd7c7595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CyberNinjaParts_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 204
+        width: 31
+        height: 50
+      alignment: 9
+      pivot: {x: 0.7321396, y: 0.5833261}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40961fa1352cbd442b96c55a196aed13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CyberNinjaParts_2
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 199
+        width: 33
+        height: 50
+      alignment: 9
+      pivot: {x: 0.60329646, y: 0.31819823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ed76d9c3cccd1409b0154b112afadd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CyberNinjaParts_3
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 230
+        width: 13
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5582698, y: 0.8156287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 592c0c9819f691e439e582682b3fc778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CyberNinjaParts_4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 216
+        width: 17
+        height: 39
+      alignment: 9
+      pivot: {x: 0.54455924, y: 0.8981777}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd043f19218422841b2c39ad933be6da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CyberNinjaParts_5
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 198
+        width: 22
+        height: 57
+      alignment: 9
+      pivot: {x: 0.46556854, y: 0.87875444}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1bf9f02a47efb44beb7e3ecd975a65
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CyberNinjaParts_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 164
+        width: 38
+        height: 55
+      alignment: 9
+      pivot: {x: 0.53986883, y: 0.8718681}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8316e6d83af708c45b3bc5c73eb485d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CyberNinjaParts_7
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 93
+        width: 98
+        height: 101
+      alignment: 9
+      pivot: {x: 0.569567, y: 0.102495626}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe764c1580da4d4c93d6f33f059876e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CyberNinjaParts_8
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 109
+        width: 23
+        height: 100
+      alignment: 9
+      pivot: {x: 0.4011947, y: 0.9052672}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42dad1c83958a304b9a2cdcee2822e7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CyberNinjaParts_9
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 46
+        width: 30
+        height: 95
+      alignment: 9
+      pivot: {x: 0.5883758, y: 0.96247894}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75fc6f38c2b37714b99feefb0f86846c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CyberNinjaParts_10
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1
+        width: 31
+        height: 103
+      alignment: 9
+      pivot: {x: 0.61063904, y: 0.7544864}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de5b5b72348e9147b3fc4e37e467ff3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CyberNinjaParts_11
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 11
+        width: 40
+        height: 97
+      alignment: 9
+      pivot: {x: 0.5662819, y: 0.80066067}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753386f3b4de46448b07074f3e543ffd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CyberNinjaParts_12
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 10
+        width: 34
+        height: 34
+      alignment: 9
+      pivot: {x: 0.33290234, y: 0.823055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691317ee81cca364a873b5d625ddf31a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CyberNinjaParts_13
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 10
+        width: 39
+        height: 28
+      alignment: 9
+      pivot: {x: 0.23778573, y: 0.8246463}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de026234d9a9044e9d1c8ac8b0683e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 740215df645760d43bfc5de2a640098f
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
