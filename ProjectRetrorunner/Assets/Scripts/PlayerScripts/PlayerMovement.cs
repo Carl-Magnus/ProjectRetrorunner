@@ -176,6 +176,7 @@ public class PlayerMovement : MonoBehaviour
                 dashTime -= Time.deltaTime;
 
                 runSpeed = dashSpeed;
+                gameObject.GetComponent<CircleCollider2D>().isTrigger = true;
             }
 
             else
@@ -183,6 +184,7 @@ public class PlayerMovement : MonoBehaviour
                 runSpeed = startRunSpeed;
                 isDashing = false;
                 dashTime = dashTimeReset;
+                gameObject.GetComponent<CircleCollider2D>().isTrigger = false;
             }
         }
     }

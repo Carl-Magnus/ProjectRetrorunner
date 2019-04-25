@@ -16,6 +16,7 @@ public class Patrol : MonoBehaviour
     public LayerMask whatIsGround;
 
     public GameObject bloodSplatter;
+    public GameObject player;
     
 
     private void Update()
@@ -44,6 +45,14 @@ public class Patrol : MonoBehaviour
     {
         Instantiate(bloodSplatter, transform.position, Quaternion.identity);
         health -= damage;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Player")
+        {
+            player.GetComponent<HealthSystem>().Damaged();
+        }
     }
 
     public void Death()

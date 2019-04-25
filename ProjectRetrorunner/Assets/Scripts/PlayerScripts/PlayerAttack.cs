@@ -75,7 +75,7 @@ public class PlayerAttack : MonoBehaviour
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
                 enemiesToDamage[i].GetComponent<Patrol>().TakeDamage(damage);
-                Physics2D.IgnoreCollision(enemiesToDamage[i].GetComponent<Collider2D>(), GetComponent<Collider2D>());
+                
             }
         }
     }
