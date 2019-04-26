@@ -105,6 +105,7 @@ Transform:
   - {fileID: 7806656189844086914}
   - {fileID: 7213521136952611975}
   - {fileID: 6161595450236152840}
+  - {fileID: 7160859302248170119}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -171,6 +172,7 @@ MonoBehaviour:
   playerFeet: {fileID: 642671582233987689}
   leftHand: {fileID: 642671581664277846}
   rightHand: {fileID: 642671583271014240}
+  groundDetection: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -187,6 +189,7 @@ MonoBehaviour:
   jumpTime: 0.3
   dashTime: 0.25
   dashSpeed: 15
+  distance: 0
   isDashing: 0
   isLeftWallSliding: 0
   isRightWallSliding: 0
@@ -600,4 +603,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 642671582438415150}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6846948369982898268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7160859302248170119}
+  m_Layer: 0
+  m_Name: Ground Detection
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7160859302248170119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6846948369982898268}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.761, y: -0.285, z: 0.0066493624}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 642671582438415150}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -71,7 +71,6 @@
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\Respawn.cs" />
     <Compile Include="Assets\Scripts\RainScripts\rainGenerator.cs" />
     <Compile Include="Assets\Scripts\RainScripts\rainMovement.cs" />
     <Compile Include="Assets\Scripts\RainScripts\SplashRemoval.cs" />

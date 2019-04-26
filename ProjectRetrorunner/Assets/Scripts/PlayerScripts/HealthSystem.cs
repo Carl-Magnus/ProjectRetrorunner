@@ -6,8 +6,8 @@ public class HealthSystem : MonoBehaviour
 {
 
     public int health;
-    public Transform respawnPoint;
-    public Transform player;
+    public GameObject respawnPoint;
+    public GameObject player;
     private bool playerIsDead;
 
 
@@ -23,6 +23,7 @@ public class HealthSystem : MonoBehaviour
         if (health <= 0)
         {
             playerIsDead = true;
+            player.SetActive(false);
             Respawn();
         }
     }
@@ -37,8 +38,11 @@ public class HealthSystem : MonoBehaviour
     {
         if(playerIsDead)
         {
+            
+            player.SetActive(true);
             player.transform.position = respawnPoint.transform.position;
             playerIsDead = false;
+            health = 1;
         }
         
     }
