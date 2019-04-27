@@ -206,4 +206,18 @@ public class PlayerMovement : MonoBehaviour
             playerBody.velocity = new Vector2(-wallJumpClimb.x, wallJumpClimb.y);
         }
     }
+
+    public IEnumerator KnockBack(float knockDur, float knockbackPwr, Vector2 knockbackDir)
+    {
+        float timer = 0;
+
+        while(knockDur > timer)
+        {
+            timer += Time.deltaTime;
+
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockbackDir.x * -150, knockbackDir.y * knockbackPwr));
+        }
+
+        yield return 0;
+    }
 }

@@ -17,7 +17,14 @@ public class Patrol : MonoBehaviour
 
     public GameObject bloodSplatter;
     public GameObject player;
-    
+
+    private Vector2 moveDirection;
+    private PlayerMovement playerMovement;
+
+    private void Start()
+    {
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+    }
 
     private void Update()
     {
@@ -52,8 +59,10 @@ public class Patrol : MonoBehaviour
         if (collision.collider.tag == "Player")
         {
             player.GetComponent<HealthSystem>().Damaged();
+            StartCoroutine(playerMovement.KnockBack(0.02f, 100, player.transform.position));
         }
     }
+
 
     public void Death()
     {

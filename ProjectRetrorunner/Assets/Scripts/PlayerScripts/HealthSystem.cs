@@ -6,6 +6,7 @@ public class HealthSystem : MonoBehaviour
 {
 
     public int health;
+    private int lives;
     public GameObject respawnPoint;
     public GameObject player;
     private bool playerIsDead;
@@ -14,13 +15,13 @@ public class HealthSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
- 
+        lives = health;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
+        if (lives <= 0)
         {
             playerIsDead = true;
             player.SetActive(false);
@@ -30,7 +31,7 @@ public class HealthSystem : MonoBehaviour
 
     public void Damaged()
     {
-        health -= 1;
+        lives -= 1;
 
     }
 
@@ -42,7 +43,7 @@ public class HealthSystem : MonoBehaviour
             player.SetActive(true);
             player.transform.position = respawnPoint.transform.position;
             playerIsDead = false;
-            health = 1;
+            lives = health;
         }
         
     }

@@ -591,7 +591,6 @@ C:\Users\gusta\OneDrive\Dokument\GitHub\ProjectRetrorunner\ProjectRetrorunner\Te
 C:\Users\gusta\OneDrive\Dokument\GitHub\ProjectRetrorunner\ProjectRetrorunner\Temp\bin\Debug\UnityEngine.Networking.xml
 C:\Users\gusta\OneDrive\Dokument\GitHub\ProjectRetrorunner\ProjectRetrorunner\Temp\bin\Debug\UnityEngine.GoogleAudioSpatializer.xml
 C:\Users\gusta\OneDrive\Dokument\GitHub\ProjectRetrorunner\ProjectRetrorunner\Temp\bin\Debug\UnityEngine.SpatialTracking.xml
-C:\Users\gusta\OneDrive\Dokument\GitHub\ProjectRetrorunner\ProjectRetrorunner\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
 C:\Users\gusta\OneDrive\Dokument\GitHub\ProjectRetrorunner\ProjectRetrorunner\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
 C:\Users\gusta\OneDrive\Dokument\GitHub\ProjectRetrorunner\ProjectRetrorunner\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\gusta\OneDrive\Dokument\GitHub\ProjectRetrorunner\ProjectRetrorunner\obj\Debug\Assembly-CSharp.dll
