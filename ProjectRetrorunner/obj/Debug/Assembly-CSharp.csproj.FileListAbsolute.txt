@@ -595,3 +595,4 @@ C:\Users\gusta\OneDrive\Dokument\GitHub\ProjectRetrorunner\ProjectRetrorunner\ob
 C:\Users\gusta\OneDrive\Dokument\GitHub\ProjectRetrorunner\ProjectRetrorunner\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\gusta\OneDrive\Dokument\GitHub\ProjectRetrorunner\ProjectRetrorunner\obj\Debug\Assembly-CSharp.dll
 C:\Users\gusta\OneDrive\Dokument\GitHub\ProjectRetrorunner\ProjectRetrorunner\obj\Debug\Assembly-CSharp.pdb
+C:\Users\gusta\OneDrive\Dokument\GitHub\ProjectRetrorunner\ProjectRetrorunner\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache

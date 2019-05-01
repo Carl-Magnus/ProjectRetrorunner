@@ -15,6 +15,11 @@ public class ChangeMenu : MonoBehaviour
         StartCoroutine("LevelSelect");
     }
 
+    public void ChangeToLevelSelectFromGameOver()
+    {
+        StartCoroutine("LevelSelectGameOver");
+    }
+
     IEnumerator LevelSelect()
     {
         int count = 0;
@@ -27,6 +32,17 @@ public class ChangeMenu : MonoBehaviour
     }
 
     IEnumerator MainMenu()
+    {
+        int count = 0;
+        while (count < 260)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y - 0.05f, transform.position.z);
+            yield return new WaitForSeconds(0.001f);
+            count++;
+        }
+    }
+
+    IEnumerator LevelSelectGameOver()
     {
         int count = 0;
         while (count < 260)

@@ -62,9 +62,11 @@
   <ItemGroup>
     <Compile Include="Assets\CameraShake.cs" />
     <Compile Include="Assets\ChangeMenu.cs" />
+    <Compile Include="Assets\ExitScript.cs" />
     <Compile Include="Assets\KeyboardInputManager.cs" />
-    <Compile Include="Assets\PlayButtonScript.cs" />
+    <Compile Include="Assets\MainMenuSceneManagment.cs" />
     <Compile Include="Assets\playerAnimations.cs" />
+    <Compile Include="Assets\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\CameraScripts\CameraFocus.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Patrol.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\blasterMovement.cs" />

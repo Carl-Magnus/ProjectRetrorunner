@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthSystem : MonoBehaviour
 {
 
     public int health;
     private int lives;
+    public int tries;
+    private int attempts;
     public GameObject respawnPoint;
     public GameObject player;
     private bool playerIsDead;
@@ -16,6 +19,7 @@ public class HealthSystem : MonoBehaviour
     void Start()
     {
         lives = health;
+        attempts = tries;
     }
 
     // Update is called once per frame
@@ -23,9 +27,15 @@ public class HealthSystem : MonoBehaviour
     {
         if (lives <= 0)
         {
-            playerIsDead = true;
             player.SetActive(false);
+            attempts--;
+            playerIsDead = true;
             Respawn();
+        }
+
+        if(attempts <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 
@@ -39,10 +49,9 @@ public class HealthSystem : MonoBehaviour
     {
         if(playerIsDead)
         {
-            
+            playerIsDead = false;
             player.SetActive(true);
             player.transform.position = respawnPoint.transform.position;
-            playerIsDead = false;
             lives = health;
         }
         
