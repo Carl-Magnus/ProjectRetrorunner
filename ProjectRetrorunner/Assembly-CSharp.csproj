@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CameraShake.cs" />
+    <Compile Include="Assets\ChangeMenu.cs" />
     <Compile Include="Assets\KeyboardInputManager.cs" />
     <Compile Include="Assets\PlayButtonScript.cs" />
     <Compile Include="Assets\playerAnimations.cs" />
