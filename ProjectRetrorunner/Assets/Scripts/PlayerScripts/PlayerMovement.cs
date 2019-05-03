@@ -176,7 +176,6 @@ public class PlayerMovement : MonoBehaviour
                 dashTime -= Time.deltaTime;
 
                 runSpeed = dashSpeed;
-                gameObject.GetComponent<CircleCollider2D>().isTrigger = true;
             }
 
             else
@@ -184,8 +183,15 @@ public class PlayerMovement : MonoBehaviour
                 runSpeed = startRunSpeed;
                 isDashing = false;
                 dashTime = dashTimeReset;
-                gameObject.GetComponent<CircleCollider2D>().isTrigger = false;
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Enemy" && dashTime > 0)
+        {
+            Physics2D.IgnoreLayerCollision(10, 13);
         }
     }
 
