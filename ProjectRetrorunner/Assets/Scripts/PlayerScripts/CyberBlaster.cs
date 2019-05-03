@@ -7,6 +7,8 @@ public class CyberBlaster : MonoBehaviour
     public Transform firiringPoint;
 
     public GameObject cyberBlast;
+
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +24,6 @@ public class CyberBlaster : MonoBehaviour
     public void Blast()
     {
         Instantiate(cyberBlast, firiringPoint.position, firiringPoint.rotation);
+        anim.SetTrigger("blast");
     }    
 }

@@ -454,7 +454,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4021988822216327109}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.086, y: 0.033, z: 0.06312985}
+  m_LocalPosition: {x: -0.081, y: 0.04, z: 0.06312985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3891163821316172935}
@@ -519,7 +519,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8661619098554775929}
   - component: {fileID: 149535482228437753}
-  - component: {fileID: 6813265991942967658}
   m_Layer: 10
   m_Name: RightShoulder
   m_TagString: Untagged
@@ -535,7 +534,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4588619661319695290}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2800002, y: 0.613, z: 0.06312985}
+  m_LocalPosition: {x: 0.2800002, y: 0.62, z: 0.06312985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6466277591247878593}
@@ -590,25 +589,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6813265991942967658
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4588619661319695290}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 69cdec2d5358f924bbe93d9be8a0d7d2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4694874164451933153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,7 +1165,7 @@ MonoBehaviour:
   attackRange: 1
   dashAttackRange: 1
   damage: 10
-  playerMovement: {fileID: 0}
+  playerMovement: {fileID: 6163353653396675424}
 --- !u!114 &7721036626554946163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1216,6 +1196,7 @@ MonoBehaviour:
   firiringPoint: {fileID: 353393641973755362}
   cyberBlast: {fileID: 5833219819818551876, guid: 5394e1553f3cda242b20f94999901b71,
     type: 3}
+  anim: {fileID: 1775446796402267557}
 --- !u!95 &1775446796402267557
 Animator:
   serializedVersion: 3

@@ -69,6 +69,24 @@ public class PlayerMovement : MonoBehaviour
 
         WallJump();
         Dash();
+
+        if (!isGrounded)
+        {
+            anim.SetBool("isJumping", true);
+        }
+        else
+        {
+            anim.SetBool("isJumping", false);
+        }
+
+        if (isDashing)
+        {
+            anim.SetBool("isDashing", true);
+        }
+        else
+        {
+            anim.SetBool("isDashing", false);
+        }
     }
 
     private void FixedUpdate()
@@ -96,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
+        anim.SetTrigger("jump");
         playerBody.velocity = Vector2.up * jumpForce;
     }
 
