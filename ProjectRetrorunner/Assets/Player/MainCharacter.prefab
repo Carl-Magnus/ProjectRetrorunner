@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5375666404502674249}
   - component: {fileID: 6006855759705687113}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16477329300932646}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.306, y: 0.562, z: 0}
+  m_LocalPosition: {x: -0.306, y: 0.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7222459407431447122}
@@ -90,7 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4452875376968141547}
   - component: {fileID: 6363891191794902745}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4126333017106701241}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6363891191794902745
 SpriteRenderer:
@@ -169,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4126333017106701241}
   - component: {fileID: 4610360091763090180}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: UpperBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,8 +188,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5375666404502674249}
-  - {fileID: 8661619098554775929}
   - {fileID: 4452875376968141547}
+  - {fileID: 8661619098554775929}
   m_Father: {fileID: 5210159961453443532}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -251,7 +251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8851335913994612215}
   - component: {fileID: 5241108399547053317}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300024, guid: f6686b6f186d6b54ab0ed11e109578ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -329,7 +329,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3282098774317823175}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5276966257418347621}
   - component: {fileID: 7110382325806890361}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CyberKatana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -439,7 +439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7953575518648876848}
   - component: {fileID: 7774304868670725688}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftHip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +454,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4021988822216327109}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.086, y: 0.033, z: 0.06312985}
+  m_LocalPosition: {x: -0.081, y: 0.04, z: 0.06312985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3891163821316172935}
@@ -497,7 +497,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300018, guid: f6686b6f186d6b54ab0ed11e109578ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -519,8 +519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8661619098554775929}
   - component: {fileID: 149535482228437753}
-  - component: {fileID: 6813265991942967658}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -535,12 +534,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4588619661319695290}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.28, y: 0.613, z: 0.06312985}
+  m_LocalPosition: {x: 0.2800002, y: 0.62, z: 0.06312985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6466277591247878593}
   m_Father: {fileID: 4126333017106701241}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &149535482228437753
 SpriteRenderer:
@@ -590,25 +589,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6813265991942967658
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4588619661319695290}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 69cdec2d5358f924bbe93d9be8a0d7d2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4694874164451933153
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,7 +598,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 353393641973755362}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FiringPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -649,7 +629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7222459407431447122}
   - component: {fileID: 8135251074412666543}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -728,7 +708,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6742707120027723356}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FeetCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -759,7 +739,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6466277591247878593}
   - component: {fileID: 6596175800497797171}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -774,7 +754,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5323810072000348729}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.024, y: -0.415, z: 0}
+  m_LocalPosition: {x: 0.024, y: -0.466, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5482308142714390756}
@@ -839,7 +819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2189343433083463429}
   - component: {fileID: 3052631110063265581}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -919,7 +899,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1605558366253247834}
   - component: {fileID: 6003547160779435529}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -998,7 +978,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 833176923820715343}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1036,9 +1016,9 @@ GameObject:
   - component: {fileID: 7721036626554946163}
   - component: {fileID: 8598795199930241471}
   - component: {fileID: 1775446796402267557}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MainCharacter
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1125,9 +1105,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1}
+  m_Offset: {x: 0, y: -1.25}
   serializedVersion: 2
-  m_Radius: 0.65249515
+  m_Radius: 0.37277153
 --- !u!114 &6163353653396675424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1180,12 +1160,12 @@ MonoBehaviour:
   whaIsEnemy:
     serializedVersion: 2
     m_Bits: 8448
-  playerAnim: {fileID: 0}
+  playerAnim: {fileID: 1775446796402267557}
   startTimeBetweenAttack: 0.1
   attackRange: 1
   dashAttackRange: 1
   damage: 10
-  playerMovement: {fileID: 0}
+  playerMovement: {fileID: 6163353653396675424}
 --- !u!114 &7721036626554946163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1216,6 +1196,7 @@ MonoBehaviour:
   firiringPoint: {fileID: 353393641973755362}
   cyberBlast: {fileID: 5833219819818551876, guid: 5394e1553f3cda242b20f94999901b71,
     type: 3}
+  anim: {fileID: 1775446796402267557}
 --- !u!95 &1775446796402267557
 Animator:
   serializedVersion: 3
@@ -1245,7 +1226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3891163821316172935}
   - component: {fileID: 2912141412954547837}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1324,7 +1305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 331461706778245313}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AttackZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1355,7 +1336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4602592649588572674}
   - component: {fileID: 4967239687322908559}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightHip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1435,7 +1416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 94346696834197908}
   - component: {fileID: 1501453193827620568}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1514,7 +1495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5482308142714390756}
   - component: {fileID: 2330955923175959959}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}

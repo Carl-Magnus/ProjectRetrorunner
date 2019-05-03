@@ -69,6 +69,24 @@ public class PlayerMovement : MonoBehaviour
 
         WallJump();
         Dash();
+
+        if (!isGrounded)
+        {
+            anim.SetBool("isJumping", true);
+        }
+        else
+        {
+            anim.SetBool("isJumping", false);
+        }
+
+        if (isDashing)
+        {
+            anim.SetBool("isDashing", true);
+        }
+        else
+        {
+            anim.SetBool("isDashing", false);
+        }
     }
 
     private void FixedUpdate()
@@ -82,10 +100,21 @@ public class PlayerMovement : MonoBehaviour
     {
         moveInput = Input.GetAxisRaw("Horizontal");
         playerBody.velocity = new Vector2(moveInput * runSpeed, playerBody.velocity.y);
+
+        if (moveInput > 0 || moveInput < 0)
+        {
+            anim.SetBool("running", true);
+        }
+        else
+        {
+            anim.SetBool("running", false);
+        }
+    
     }
 
     private void Jump()
     {
+        anim.SetTrigger("jump");
         playerBody.velocity = Vector2.up * jumpForce;
     }
 
