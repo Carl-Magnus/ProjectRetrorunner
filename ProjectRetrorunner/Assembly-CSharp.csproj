@@ -64,6 +64,7 @@
     <Compile Include="Assets\playerAnimations.cs" />
     <Compile Include="Assets\Scripts\CameraScripts\CameraFocus.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Patrol.cs" />
+    <Compile Include="Assets\Scripts\Parallax\Parallaxing.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\blasterMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\CyberBlaster.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\InputManager.cs" />
