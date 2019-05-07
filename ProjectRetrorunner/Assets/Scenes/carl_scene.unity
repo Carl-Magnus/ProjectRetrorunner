@@ -530,6 +530,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 44.646004
       objectReference: {fileID: 0}
+    - target: {fileID: 642671581664277847, guid: 2947e41f02c9181499063698c7aedac1,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 642671582233987686, guid: 2947e41f02c9181499063698c7aedac1,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 642671582438415153, guid: 2947e41f02c9181499063698c7aedac1,
+        type: 3}
+      propertyPath: runSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 642671582438415153, guid: 2947e41f02c9181499063698c7aedac1,
+        type: 3}
+      propertyPath: wallJumpClimb.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 642671582438415153, guid: 2947e41f02c9181499063698c7aedac1,
+        type: 3}
+      propertyPath: wallJumpClimb.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 642671582438415153, guid: 2947e41f02c9181499063698c7aedac1,
+        type: 3}
+      propertyPath: airSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 642671582438415153, guid: 2947e41f02c9181499063698c7aedac1,
+        type: 3}
+      propertyPath: maxAirSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 642671583271014241, guid: 2947e41f02c9181499063698c7aedac1,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2947e41f02c9181499063698c7aedac1, type: 3}
 --- !u!4 &386426515 stripped
