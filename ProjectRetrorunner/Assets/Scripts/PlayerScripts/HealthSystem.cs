@@ -10,14 +10,18 @@ public class HealthSystem : MonoBehaviour
     private int lives;
     public int tries;
     public GameObject respawnPoint;
+    public float damageCooldown;
+    private float damageCooldownReset;
     public GameObject player;
     private bool playerIsDead;
+    public bool isDamaged;
 
 
     // Start is called before the first frame update
     void Start()
     {
         lives = health;
+        damageCooldownReset = damageCooldown;
     }
 
     // Update is called once per frame
@@ -31,6 +35,8 @@ public class HealthSystem : MonoBehaviour
 
             Respawn();
         }
+
+        damageCooldown -= Time.deltaTime;
     }
         
            
@@ -39,18 +45,22 @@ public class HealthSystem : MonoBehaviour
     {
         lives -= 1;
         Debug.Log("Damaged");
-
-    }
-
-    private void Respawn()
-    {
-        if(playerIsDead)
+        if(isDamaged)
         {
-            playerIsDead = false;
-            player.SetActive(true);
-            player.transform.position = respawnPoint.transform.position;
-            lives = health;
+
+            if (damageCooldown < 0)
+            {
+                lives -= 1;
+                damageCooldown = damageCooldownReset;
+                Debug.Log("Damaged");
+            }
+
+            else
+            {
+
+                
+                isDamaged = false;
+            }
         }
-        
     }
 }

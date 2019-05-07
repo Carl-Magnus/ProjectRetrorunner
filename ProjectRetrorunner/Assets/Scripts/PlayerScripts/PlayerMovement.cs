@@ -35,12 +35,15 @@ public class PlayerMovement : MonoBehaviour
     public float dashTime;
     public float dashSpeed;
     private float dashTimeReset;
+    public float knockTime;
+    public float knockBackForce;
 
     private bool isJumping;
     private bool isGrounded;
     public bool isDashing;
     public bool isLeftWallSliding;
     public bool isRightWallSliding;
+    public bool isKnockedUp;
 
     // Start is called before the first frame update
     void Start()
@@ -242,17 +245,23 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public IEnumerator KnockBack(float knockDur, float knockbackPwr, Vector2 knockbackDir)
+    public void KnockUp()
     {
-        float timer = 0;
+        
+         
+         if (isKnockedUp)
+         {
+            if(knockTime > 0)
+            {
+                knockTime -= Time.deltaTime;
+                playerBody.velocity = Vector2.up * knockBackForce;
+            }
 
-        while(knockDur > timer)
-        {
-            timer += Time.deltaTime;
-
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockbackDir.x * -150, knockbackDir.y * knockbackPwr));
-        }
-
-        yield return 0;
+            else
+            {
+                isKnockedUp = false;
+            }
+            
+         }
     }
 }
