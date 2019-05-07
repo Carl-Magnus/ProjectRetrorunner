@@ -218,7 +218,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Enemy" && dashTime > 0)
+        if (collision.collider.tag == "Enemy" && isDashing)
         {
             Physics2D.IgnoreLayerCollision(10, 13);
         }

@@ -9,7 +9,6 @@ public class HealthSystem : MonoBehaviour
     public int health;
     private int lives;
     public int tries;
-    private int attempts;
     public GameObject respawnPoint;
     public GameObject player;
     private bool playerIsDead;
@@ -19,7 +18,6 @@ public class HealthSystem : MonoBehaviour
     void Start()
     {
         lives = health;
-        attempts = tries;
     }
 
     // Update is called once per frame
@@ -28,20 +26,19 @@ public class HealthSystem : MonoBehaviour
         if (lives <= 0)
         {
             player.SetActive(false);
-            attempts--;
             playerIsDead = true;
+            SceneManager.LoadScene("GameOver");
+
             Respawn();
         }
-
-        if(attempts <= 0)
-        {
-            SceneManager.LoadScene("GameOver");
-        }
     }
+        
+           
 
     public void Damaged()
     {
         lives -= 1;
+        Debug.Log("Damaged");
 
     }
 
