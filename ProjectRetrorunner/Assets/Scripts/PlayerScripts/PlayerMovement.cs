@@ -15,8 +15,6 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
 
     public Vector2 wallJumpClimb;
-    public Vector2 wallJumpOff;
-    public Vector2 wallJumpLeap;
 
     public int extraJumps;
     private int jumpReset;
@@ -57,8 +55,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
         Dash();
     }
 
@@ -75,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
         {
             extraJumps = jumpReset;
         }
+
         CharacterMovement();
         WallSlide();
         WallJump();
@@ -91,30 +88,12 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            //if (Mathf.Abs(playerBody.velocity.x) > maxAirSpeed)
-            //{
-            //    if (playerBody.velocity.x < 0)
-            //    {
-            //        moveInput = Mathf.Clamp(playerBody.velocity.x, 0, 1);
-            //    }
-
-            //    if (playerBody.velocity.x > 0)
-            //    {
-            //        moveInput = Mathf.Clamp(playerBody.velocity.x, -1, 0);
-
-            //    }
-            //}
-
             playerBody.velocity += new Vector2(moveInput * airSpeed, 0);
 
             float x = Mathf.Clamp(playerBody.velocity.x, -maxAirSpeed, maxAirSpeed);
 
             playerBody.velocity = new Vector2(x, playerBody.velocity.y);
-
-
         }
-
-
     }
 
     private void Jump()
@@ -154,7 +133,6 @@ public class PlayerMovement : MonoBehaviour
             jumpTimeCounter = jumpTime;
             Jump();
         }
-
     }
 
     public void ExtraJump()
@@ -219,7 +197,6 @@ public class PlayerMovement : MonoBehaviour
     //Metod som saknar ner spelaren om hans hand kolliderar med en vägg och han rör sig nedåt
     private void WallSlide()
     {
-
         if (isLeftWallSliding && playerBody.velocity.y < 0)
         {
             isJumping = false;

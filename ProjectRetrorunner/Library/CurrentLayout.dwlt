@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 887, y: 498}
   m_MaxSize: {x: 16012, y: 14048}
   vertical: 0
-  controlID: 34
+  controlID: 61
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -412,9 +412,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 32380000
-      m_LastClickedID: 14386
-      m_ExpandedIDs: 5cfbffff32380000
+      m_SelectedIDs: 740a0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 7cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -693,20 +693,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts/PlayerScripts
   m_ViewMode: 1
   m_StartGridSize: 50
   m_LastFolders:
-  - Assets
+  - Assets/Scripts/PlayerScripts
   m_LastFoldersGridSize: 50
   m_LastProjectPath: C:\Users\carlm\OneDrive\Dokument\GitHub\ProjectRetrorunner\ProjectRetrorunner
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: ba2a0000
-    m_LastClickedID: 10938
-    m_ExpandedIDs: 00000000ba2a0000e22a0000fa2b0000042d0000c02e0000e02e00006c3000003a3100001c3500008e35000000ca9a3b
+    scrollPos: {x: 0, y: 133}
+    m_SelectedIDs: a6360000
+    m_LastClickedID: 13990
+    m_ExpandedIDs: 000000006c2a0000942a0000ac2b0000b62c0000722e0000922e00001e300000ec300000ce3400004035000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -734,7 +734,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ba2a0000e22a0000fa2b0000042d0000c02e0000e02e00006c3000003a3100001c3500008e350000
+    m_ExpandedIDs: 000000006c2a0000942a0000ac2b0000b62c0000722e0000922e00001e300000ec300000ce34000040350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
