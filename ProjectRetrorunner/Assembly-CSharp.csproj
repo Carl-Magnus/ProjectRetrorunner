@@ -71,9 +71,9 @@
     <Compile Include="Assets\Scripts\EnemyScripts\Patrol.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\blasterMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\CyberBlaster.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\HealthSystem.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerAttack.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerHealthSystem.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\RainScripts\rainGenerator.cs" />

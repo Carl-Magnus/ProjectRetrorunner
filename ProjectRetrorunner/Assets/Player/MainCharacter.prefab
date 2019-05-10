@@ -1016,6 +1016,7 @@ GameObject:
   - component: {fileID: 7721036626554946163}
   - component: {fileID: 8598795199930241471}
   - component: {fileID: 1775446796402267557}
+  - component: {fileID: 3219355918105404226}
   m_Layer: 10
   m_Name: MainCharacter
   m_TagString: Player
@@ -1140,9 +1141,12 @@ MonoBehaviour:
   jumpTime: 0.3
   dashTime: 0.2
   dashSpeed: 10
+  knockBackForce: 10
+  knockBackTime: 1
   isDashing: 0
   isLeftWallSliding: 0
   isRightWallSliding: 0
+  knockBackFromRight: 0
 --- !u!114 &2726083916346822173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1216,6 +1220,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3219355918105404226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6679908283527304324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33368251a23a1604c9d90f0ec2a2bd71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
+  damageCooldown: 1
+  playerIsDamaged: 0
+  playerMovement: {fileID: 6163353653396675424}
 --- !u!1 &6956803015011439333
 GameObject:
   m_ObjectHideFlags: 0
