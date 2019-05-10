@@ -258,6 +258,20 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
+    public IEnumerator KnockBack(float knockDur, float knockbackPwr, Vector2 knockbackDir)
+    {
+        float timer = 0;
+
+        while(knockDur > timer)
+        {
+            timer += Time.deltaTime;
+
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockbackDir.x * -150, knockbackDir.y * knockbackPwr));
+        }
+
+        yield return 0;
+
     public void KnockBack(Vector2 direction)
     {
         knockBackCounter = knockBackTime;
