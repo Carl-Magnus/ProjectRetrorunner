@@ -36,11 +36,20 @@ public class PlayerMovement : MonoBehaviour
     public float dashSpeed;
     private float dashTimeReset;
 
+    public float knockBackForce;
+    public float knockBackTime;
+    private float knockBackCounter;
+
+
     private bool isJumping;
     private bool isGrounded;
     public bool isDashing;
     public bool isLeftWallSliding;
     public bool isRightWallSliding;
+
+
+    public bool knockBackFromRight;
+
 
     // Start is called before the first frame update
     void Start()
@@ -98,18 +107,25 @@ public class PlayerMovement : MonoBehaviour
     //Metod som tar in input ifrån om man rör sig åt vänster eller höger på en horisontella axeln, och multiplicerar värdet med runSpeed. Resulterar i att karaktärern rör sig höger respektive vänster.
     private void CharacterMovement()
     {
-        moveInput = Input.GetAxisRaw("Horizontal");
-        playerBody.velocity = new Vector2(moveInput * runSpeed, playerBody.velocity.y);
-
-        if (moveInput > 0 || moveInput < 0)
+        if (knockBackCounter <= 0)
         {
-            anim.SetBool("running", true);
+            moveInput = Input.GetAxisRaw("Horizontal");
+            playerBody.velocity = new Vector2(moveInput * runSpeed, playerBody.velocity.y);
+
+            if (moveInput > 0 || moveInput < 0)
+            {
+                anim.SetBool("running", true);
+            }
+            else
+            {
+                anim.SetBool("running", false);
+            }
         }
+
         else
         {
-            anim.SetBool("running", false);
+            knockBackCounter -= Time.deltaTime;
         }
-    
     }
 
     private void Jump()
@@ -242,6 +258,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
     public IEnumerator KnockBack(float knockDur, float knockbackPwr, Vector2 knockbackDir)
     {
         float timer = 0;
@@ -254,5 +271,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
         yield return 0;
+
+    public void KnockBack(Vector2 direction)
+    {
+        knockBackCounter = knockBackTime;
+
+        playerBody.velocity = direction * knockBackForce;
+
+
     }
 }

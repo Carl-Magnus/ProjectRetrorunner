@@ -58,8 +58,14 @@ public class Patrol : MonoBehaviour
     {
         if (collision.collider.tag == "Player")
         {
+
             player.GetComponent<HealthSystem>().Damaged();
             StartCoroutine(playerMovement.KnockBack(0.02f, 100, player.transform.position));
+
+            Vector2 hitDirection = collision.transform.position - transform.position;
+            hitDirection = hitDirection.normalized;
+            player.GetComponent<PlayerHealthSystem>().playerIsDamaged = true;
+            player.GetComponent<PlayerHealthSystem>().PlayerGetDamaged(hitDirection);
         }
     }
 
