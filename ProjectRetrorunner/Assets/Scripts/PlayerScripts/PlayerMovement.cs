@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Rigidbody2D playerBody;
 
+    public Rigidbody2D playerBody;
+    
     public Transform playerFeet;
     public Transform leftHand;
     public Transform rightHand;
@@ -37,24 +38,35 @@ public class PlayerMovement : MonoBehaviour
     public float dashTime;
     public float dashSpeed;
     private float dashTimeReset;
+    public float knockBackForce;
+    public float knockBackTime;
+    private float knockBackCounter;
 
     private bool isJumping;
     private bool isGrounded;
     public bool isDashing;
     public bool isLeftWallSliding;
     public bool isRightWallSliding;
+    public bool knockBackFromRight;
 
     // Start is called before the first frame update
+
     void Start()
     {
         //Hänvisar till spelarens egen animation controller
+
         anim = GetComponent<Animator>();
+
         jumpReset = extraJumps;
+
         dashTimeReset = dashTime;
+
         startRunSpeed = runSpeed;
+
     }
 
     // Update is called once per frame
+
     void Update()
     {
         Dash();
@@ -63,12 +75,15 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         //Kollar ifall spelarens fötter befinner sig på marken
+
         isGrounded = Physics2D.OverlapCircle(playerFeet.position, feetRadiusCheck, whatIsGround);
 
         //Kollar ifall spelarens hand befinner sig emot en vägg(Ground)
-        isLeftWallSliding = Physics2D.OverlapCircle(leftHand.position, leftHandRadiusCheck, whatIsGround);
-        isRightWallSliding = Physics2D.OverlapCircle(rightHand.position, rightHandRadiusCheck, whatIsGround);
 
+        isLeftWallSliding = Physics2D.OverlapCircle(leftHand.position, leftHandRadiusCheck, whatIsGround);
+
+        isRightWallSliding = Physics2D.OverlapCircle(rightHand.position, rightHandRadiusCheck, whatIsGround);
+        
         if (isGrounded)
         {
             extraJumps = jumpReset;
@@ -77,6 +92,8 @@ public class PlayerMovement : MonoBehaviour
         CharacterMovement();
         WallSlide();
         WallJump();
+
+        Dash();
 
         if (!isGrounded)
         {
@@ -98,6 +115,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     //Metod som tar in input ifrån om man rör sig åt vänster eller höger på en horisontella axeln, och multiplicerar värdet med runSpeed. Resulterar i att karaktärern rör sig höger respektive vänster.
+
     private void CharacterMovement()
     {
         moveInput = Input.GetAxisRaw("Horizontal");
@@ -115,15 +133,26 @@ public class PlayerMovement : MonoBehaviour
             playerBody.velocity = new Vector2(x, playerBody.velocity.y);
         }
 
-        if (moveInput > 0 || moveInput < 0)
+        if (knockBackCounter <= 0)
         {
-            anim.SetBool("running", true);
+            moveInput = Input.GetAxisRaw("Horizontal");
+
+            playerBody.velocity = new Vector2(moveInput * runSpeed, playerBody.velocity.y);
+
+            if (moveInput > 0 || moveInput < 0)
+
+            {
+                anim.SetBool("running", true);
+            }
+            else
+            {
+                anim.SetBool("running", false);
+            }
         }
         else
         {
-            anim.SetBool("running", false);
+            knockBackCounter -= Time.deltaTime;
         }
-    
     }
 
     private void Jump()
@@ -136,7 +165,7 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = false; playerBody.velocity = Vector2.up * jumpForce;
         }
     }
-
+    
     public void StopJumping()
     {
         isJumping = false;
@@ -149,9 +178,9 @@ public class PlayerMovement : MonoBehaviour
             if (jumpTimeCounter > 0)
             {
                 Jump();
+
                 jumpTimeCounter -= Time.deltaTime;
             }
-
             else
             {
                 isJumping = false;
@@ -164,10 +193,12 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
         {
             isJumping = true;
-            jumpTimeCounter = jumpTime;
-            Jump();
-        }
 
+            jumpTimeCounter = jumpTime;
+
+            Jump();
+
+        }
     }
 
     public void ExtraJump()
@@ -175,12 +206,15 @@ public class PlayerMovement : MonoBehaviour
         if (extraJumps > 0)
         {
             isJumping = true;
+
             jumpTimeCounter = jumpTime;
+
             Jump();
+
             extraJumps--;
         }
     }
-
+    
     public void FlipCharacterLeft()
     {
         transform.eulerAngles = new Vector3(0, 180, 0);
@@ -191,6 +225,30 @@ public class PlayerMovement : MonoBehaviour
         transform.eulerAngles = new Vector3(0, 0, 0);
     }
 
+    //Metod som saknar ner spelaren om hans hand kolliderar med en vägg och han rör sig nedåt
+    private void WallSlide()
+    {
+        if (isLeftWallSliding && playerBody.velocity.y < 0)
+        {
+            isJumping = false;
+
+            if (playerBody.velocity.y < maxWallSlideSpeed)
+            {
+                playerBody.velocity = new Vector2(playerBody.velocity.x, -maxWallSlideSpeed);
+            }
+        }
+        
+        else if (isRightWallSliding && playerBody.velocity.y < 0)
+        {
+            isJumping = false;
+            
+            if (playerBody.velocity.y < maxWallSlideSpeed)
+            {
+                playerBody.velocity = new Vector2(playerBody.velocity.x, -maxWallSlideSpeed);
+            }
+        }
+    }
+
     public void Dash()
     {
         if (isDashing)
@@ -198,10 +256,8 @@ public class PlayerMovement : MonoBehaviour
             if (dashTime > 0)
             {
                 dashTime -= Time.deltaTime;
-
                 runSpeed = dashSpeed;
             }
-
             else
             {
                 runSpeed = startRunSpeed;
@@ -209,6 +265,7 @@ public class PlayerMovement : MonoBehaviour
                 dashTime = dashTimeReset;
             }
         }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -247,31 +304,26 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isLeftWallSliding)
         {
-            //isJumping = true;
-
+            isJumping = true;
             playerBody.velocity = new Vector2(wallJumpClimb.x, wallJumpClimb.y);
-
         }
 
         else if (Input.GetKeyDown(KeyCode.Space) && isRightWallSliding)
         {
             //isJumping = true;
+        }
 
+        else if (Input.GetKeyDown(KeyCode.Space) && isRightWallSliding && !isJumping)
+        {
+            isJumping = true;
             playerBody.velocity = new Vector2(-wallJumpClimb.x, wallJumpClimb.y);
         }
+
     }
 
-    public IEnumerator KnockBack(float knockDur, float knockbackPwr, Vector2 knockbackDir)
+    public void KnockBack(Vector2 direction)
     {
-        float timer = 0;
-
-        while(knockDur > timer)
-        {
-            timer += Time.deltaTime;
-
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockbackDir.x * -150, knockbackDir.y * knockbackPwr));
-        }
-
-        yield return 0;
+        knockBackCounter = knockBackTime;
+        playerBody.velocity = direction * knockBackForce;
     }
 }
