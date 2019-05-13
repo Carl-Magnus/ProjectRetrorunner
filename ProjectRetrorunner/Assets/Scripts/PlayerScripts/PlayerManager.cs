@@ -7,11 +7,12 @@ public class PlayerManager : MonoBehaviour
     public PlayerMovement movement;
     public CyberBlaster blaster;
     public PlayerAttack attack;
+    private PlayerAudioManager playerAudioManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerAudioManager = gameObject.GetComponent<PlayerAudioManager>();
     }
 
     // Update is called once per frame
@@ -74,6 +75,7 @@ public class PlayerManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             blaster.Blast();
+            playerAudioManager.PlayLaserShot();
         }
     }
 
@@ -83,11 +85,13 @@ public class PlayerManager : MonoBehaviour
         {
             movement.isDashing = true;
             attack.DashAttack();
+            playerAudioManager.PlayDashSound();
         }
     }
 
     public void AttackLogic()
     {
         attack.Attack();
+        playerAudioManager.PlayAttackSound();
     }
 }

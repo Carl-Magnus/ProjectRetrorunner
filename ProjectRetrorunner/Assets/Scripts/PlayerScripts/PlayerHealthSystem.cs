@@ -9,12 +9,14 @@ public class PlayerHealthSystem : MonoBehaviour
     public float damageCooldown;
     private float damageCooldownReset;
     public bool playerIsDamaged;
-    public PlayerMovement playerMovement;
+    private PlayerMovement playerMovement;
+    private PlayerAudioManager playerAudioManager;
     // Start is called before the first frame update
     void Start()
     {
         damageCooldownReset = damageCooldown;
-        playerMovement = FindObjectOfType<PlayerMovement>();
+        playerMovement = gameObject.GetComponent<PlayerMovement>();
+        playerAudioManager = gameObject.GetComponent<PlayerAudioManager>();
     }
     // Update is called once per frame
     void Update()
@@ -36,6 +38,7 @@ public class PlayerHealthSystem : MonoBehaviour
                 damageCooldown = damageCooldownReset;
                 playerMovement.KnockBack(direction);
                 Debug.Log("Damaged");
+                playerAudioManager.PlayHitByEnemy();
             }
             else
             {

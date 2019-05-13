@@ -1017,6 +1017,8 @@ GameObject:
   - component: {fileID: 8598795199930241471}
   - component: {fileID: 1775446796402267557}
   - component: {fileID: 3219355918105404226}
+  - component: {fileID: 1612376208}
+  - component: {fileID: 1612376207}
   m_Layer: 10
   m_Name: MainCharacter
   m_TagString: Player
@@ -1033,7 +1035,7 @@ Transform:
   m_GameObject: {fileID: 6679908283527304324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.212, y: 0.073, z: -0.06312985}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children:
   - {fileID: 4126333017106701241}
   - {fileID: 7953575518648876848}
@@ -1129,8 +1131,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   wallJumpClimb: {x: 4, y: 8}
-  wallJumpOff: {x: 0, y: 0}
-  wallJumpLeap: {x: 0, y: 0}
   extraJumps: 1
   runSpeed: 5
   airSpeed: 5
@@ -1148,7 +1148,6 @@ MonoBehaviour:
   isDashing: 0
   isLeftWallSliding: 0
   isRightWallSliding: 0
-  knockBackFromRight: 0
 --- !u!114 &2726083916346822173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1168,7 +1167,7 @@ MonoBehaviour:
     m_Bits: 8448
   playerAnim: {fileID: 1775446796402267557}
   startTimeBetweenAttack: 0.1
-  attackRange: 1
+  attackRange: 0.93
   dashAttackRange: 1
   damage: 10
   playerMovement: {fileID: 6163353653396675424}
@@ -1237,7 +1236,118 @@ MonoBehaviour:
   health: 5
   damageCooldown: 1
   playerIsDamaged: 0
-  playerMovement: {fileID: 6163353653396675424}
+--- !u!82 &1612376208
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6679908283527304324}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1612376207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6679908283527304324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 582c701a2f2a69b4e9ff6185c7182456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserShot: {fileID: 8300000, guid: 9f9c0c3a08546754cb3f752100963ef6, type: 3}
+  hitByEnemy: {fileID: 8300000, guid: cc1837e2651dc2e4d8839b2bbc6e91f2, type: 3}
+  attackSound: {fileID: 8300000, guid: 15956d11bfb9eaf418c5593e1511bc8b, type: 3}
+  dashSound: {fileID: 8300000, guid: 9545f338b0901c94db7d9ba68899a8d8, type: 3}
 --- !u!1 &6956803015011439333
 GameObject:
   m_ObjectHideFlags: 0

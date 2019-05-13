@@ -20,10 +20,12 @@ public class Patrol : MonoBehaviour
 
     private Vector2 moveDirection;
     private PlayerMovement playerMovement;
+    private EnemyAudioManager enemyAudioManager;
 
     private void Start()
     {
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        enemyAudioManager = gameObject.GetComponent<EnemyAudioManager>();
     }
 
     private void Update()
@@ -52,6 +54,7 @@ public class Patrol : MonoBehaviour
     {
         Instantiate(bloodSplatter, transform.position, Quaternion.identity);
         health -= damage;
+        enemyAudioManager.PlayerHitByPlayer();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
