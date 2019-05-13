@@ -1016,6 +1016,7 @@ GameObject:
   - component: {fileID: 7721036626554946163}
   - component: {fileID: 8598795199930241471}
   - component: {fileID: 1775446796402267557}
+  - component: {fileID: 4945330668116376386}
   m_Layer: 10
   m_Name: MainCharacter
   m_TagString: Player
@@ -1061,7 +1062,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a7e28c2492e6c9b4eb225001242f3ec0, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -1127,16 +1128,18 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  wallJumpClimb: {x: 15, y: 10}
+  wallJumpClimb: {x: 4, y: 8}
   wallJumpOff: {x: 0, y: 0}
   wallJumpLeap: {x: 0, y: 0}
   extraJumps: 1
   runSpeed: 5
+  airSpeed: 5
+  maxAirSpeed: 5
   jumpForce: 6
-  maxWallSlideSpeed: 5
+  maxWallSlideSpeed: 2.5
   feetRadiusCheck: 0.3
-  leftHandRadiusCheck: 0.1
-  rightHandRadiusCheck: 0.1
+  leftHandRadiusCheck: 0.5
+  rightHandRadiusCheck: 0.5
   jumpTime: 0.3
   dashTime: 0.2
   dashSpeed: 10
@@ -1216,6 +1219,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4945330668116376386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6679908283527304324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33368251a23a1604c9d90f0ec2a2bd71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  tries: 1
+  respawnPoint: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &6956803015011439333
 GameObject:
   m_ObjectHideFlags: 0
