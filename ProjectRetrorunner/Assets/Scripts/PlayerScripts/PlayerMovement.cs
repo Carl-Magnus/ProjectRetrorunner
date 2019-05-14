@@ -46,6 +46,8 @@ public class PlayerMovement : MonoBehaviour
     public bool isLeftWallSliding;
     public bool isRightWallSliding;
 
+    public GameObject dashParticles;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -170,6 +172,7 @@ public class PlayerMovement : MonoBehaviour
                 dashTime -= Time.deltaTime;
 
                 runSpeed = dashSpeed;
+                Instantiate(dashParticles, transform.position, Quaternion.identity);
             }
 
             else

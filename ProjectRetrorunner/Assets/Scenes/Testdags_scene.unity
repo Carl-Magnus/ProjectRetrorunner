@@ -2802,6 +2802,12 @@ PrefabInstance:
       propertyPath: startTimeBetweenAttack
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 6163353653396675424, guid: 555030b894f5c0542b537204eaea0d6a,
+        type: 3}
+      propertyPath: dashParticles
+      value: 
+      objectReference: {fileID: 4518230642449981122, guid: 1c909046cf919c345b05019b1fe87c06,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 2205544895958737841, guid: 555030b894f5c0542b537204eaea0d6a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 555030b894f5c0542b537204eaea0d6a, type: 3}
