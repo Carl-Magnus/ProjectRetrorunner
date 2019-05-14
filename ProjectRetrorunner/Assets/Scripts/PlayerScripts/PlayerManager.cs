@@ -91,7 +91,11 @@ public class PlayerManager : MonoBehaviour
 
     public void AttackLogic()
     {
-        attack.Attack();
-        playerAudioManager.PlayAttackSound();
+        if (Input.GetKey(KeyCode.L))
+        {
+            attack.Attack();
+            playerAudioManager.PlayAttackSound();
+        }
+        
     }
 }

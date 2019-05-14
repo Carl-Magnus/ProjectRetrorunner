@@ -1209,13 +1209,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1010408533}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.598565, y: 1.0450835, z: -0.14204177}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
+  m_LocalPosition: {x: 0.84, y: 4.61, z: -0.14204177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!1 &1017914901
 GameObject:
   m_ObjectHideFlags: 0
@@ -2797,16 +2797,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1612376208, guid: 555030b894f5c0542b537204eaea0d6a, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1612376207, guid: 555030b894f5c0542b537204eaea0d6a, type: 3}
-      propertyPath: audioSource
-      value: 
+    - target: {fileID: 2726083916346822173, guid: 555030b894f5c0542b537204eaea0d6a,
+        type: 3}
+      propertyPath: startTimeBetweenAttack
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 1612376208, guid: 555030b894f5c0542b537204eaea0d6a, type: 3}
+    - {fileID: 2205544895958737841, guid: 555030b894f5c0542b537204eaea0d6a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 555030b894f5c0542b537204eaea0d6a, type: 3}
 --- !u!1001 &1994023991
 PrefabInstance:
@@ -3187,7 +3184,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2088339980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.19196, y: 9.058851, z: 0}
+  m_LocalPosition: {x: 12.07, y: 9.058851, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3411,7 +3408,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122026293}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -2.77, y: 6.36, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

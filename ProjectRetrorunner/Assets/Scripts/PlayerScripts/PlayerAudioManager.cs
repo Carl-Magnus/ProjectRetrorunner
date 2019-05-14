@@ -8,7 +8,7 @@ public class PlayerAudioManager : MonoBehaviour
     public AudioClip hitByEnemy;
     public AudioClip attackSound;
     public AudioClip dashSound;
-    public AudioSource audioSource;
+    private AudioSource audioSource;
 
     public void PlayLaserShot()
     {
@@ -36,7 +36,7 @@ public class PlayerAudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

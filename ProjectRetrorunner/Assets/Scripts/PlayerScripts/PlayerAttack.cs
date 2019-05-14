@@ -21,12 +21,12 @@ public class PlayerAttack : MonoBehaviour
 
     public PlayerMovement playerMovement;
 
-    private 
+    
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -47,8 +47,6 @@ public class PlayerAttack : MonoBehaviour
         {
             timeBetweenAttack = startTimeBetweenAttack;
 
-            if (Input.GetKey(KeyCode.L))
-            {
                 playerAnim.SetTrigger("attack");
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, whaIsEnemy);
 
@@ -56,7 +54,6 @@ public class PlayerAttack : MonoBehaviour
                 {
                     enemiesToDamage[i].GetComponent<Patrol>().TakeDamage(damage);
                 }
-            }
         }
 
         else

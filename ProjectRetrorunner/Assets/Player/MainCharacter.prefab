@@ -1017,8 +1017,8 @@ GameObject:
   - component: {fileID: 8598795199930241471}
   - component: {fileID: 1775446796402267557}
   - component: {fileID: 3219355918105404226}
-  - component: {fileID: 1612376208}
-  - component: {fileID: 1612376207}
+  - component: {fileID: 1612376197}
+  - component: {fileID: 2205544895958737841}
   m_Layer: 10
   m_Name: MainCharacter
   m_TagString: Player
@@ -1164,7 +1164,7 @@ MonoBehaviour:
   dashAttackPosition: {fileID: 331461706778245313}
   whaIsEnemy:
     serializedVersion: 2
-    m_Bits: 8448
+    m_Bits: 8192
   playerAnim: {fileID: 1775446796402267557}
   startTimeBetweenAttack: 0.1
   attackRange: 0.93
@@ -1236,7 +1236,23 @@ MonoBehaviour:
   health: 5
   damageCooldown: 1
   playerIsDamaged: 0
---- !u!82 &1612376208
+--- !u!114 &1612376197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6679908283527304324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 582c701a2f2a69b4e9ff6185c7182456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserShot: {fileID: 8300000, guid: 9f9c0c3a08546754cb3f752100963ef6, type: 3}
+  hitByEnemy: {fileID: 8300000, guid: 9545f338b0901c94db7d9ba68899a8d8, type: 3}
+  attackSound: {fileID: 8300000, guid: 15956d11bfb9eaf418c5593e1511bc8b, type: 3}
+  dashSound: {fileID: 8300000, guid: cc1837e2651dc2e4d8839b2bbc6e91f2, type: 3}
+--- !u!82 &2205544895958737841
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1247,7 +1263,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1332,22 +1348,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1612376207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6679908283527304324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 582c701a2f2a69b4e9ff6185c7182456, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserShot: {fileID: 8300000, guid: 9f9c0c3a08546754cb3f752100963ef6, type: 3}
-  hitByEnemy: {fileID: 8300000, guid: cc1837e2651dc2e4d8839b2bbc6e91f2, type: 3}
-  attackSound: {fileID: 8300000, guid: 15956d11bfb9eaf418c5593e1511bc8b, type: 3}
-  dashSound: {fileID: 8300000, guid: 9545f338b0901c94db7d9ba68899a8d8, type: 3}
 --- !u!1 &6956803015011439333
 GameObject:
   m_ObjectHideFlags: 0
