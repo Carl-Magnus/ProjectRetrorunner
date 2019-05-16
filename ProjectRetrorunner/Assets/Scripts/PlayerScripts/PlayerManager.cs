@@ -30,6 +30,8 @@ public class PlayerManager : MonoBehaviour
         AttackLogic();
 
         DashLogic();
+
+        WallJumpLogic();
     }
 
     //Logik för att få spelaren att hoppa
@@ -97,5 +99,13 @@ public class PlayerManager : MonoBehaviour
             playerAudioManager.PlayAttackSound();
         }
         
+    }
+
+    public void WallJumpLogic()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            movement.WallJump();
+        }
     }
 }

@@ -99,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
 
         CharacterMovement();
         WallSlide();
-        WallJump();
+        //WallJump();
     }
 
     //Metod som tar in input ifrån om man rör sig åt vänster eller höger på en horisontella axeln, och multiplicerar värdet med runSpeed. Resulterar i att karaktärern rör sig höger respektive vänster.
@@ -205,7 +205,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void WallJump()
+    public void WallJump()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isLeftWallSliding && !isJumping)
         {
