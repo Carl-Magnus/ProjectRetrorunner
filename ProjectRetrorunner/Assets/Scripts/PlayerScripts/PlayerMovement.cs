@@ -63,6 +63,24 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Dash();
+
+        if (moveInput > 0 || moveInput < 0)
+        {
+            anim.SetBool("running", true);
+        }
+        else
+        {
+            anim.SetBool("running", false);
+        }
+
+        if (!isGrounded)
+        {
+            anim.SetBool("isJumping", true);
+        }
+        else
+        {
+            anim.SetBool("isJumping", false);
+        }
     }
 
     private void FixedUpdate()
@@ -169,6 +187,8 @@ public class PlayerMovement : MonoBehaviour
         {
             if (dashTime > 0)
             {
+                anim.SetBool("isDashing", true);
+
                 dashTime -= Time.deltaTime;
 
                 runSpeed = dashSpeed;
@@ -177,6 +197,7 @@ public class PlayerMovement : MonoBehaviour
 
             else
             {
+                anim.SetBool("isDashing", false);
                 runSpeed = startRunSpeed;
                 isDashing = false;
                 dashTime = dashTimeReset;
