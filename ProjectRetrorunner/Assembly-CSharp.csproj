@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\CameraScripts\CameraFocus.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\PatrolOrb\EnemyAudioManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\PatrolOrb\Patrol.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\SentryTurret\BulletMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\SentryTurret\RotateAim.cs" />
     <Compile Include="Assets\Scripts\ParallaxScripts\Parallaxing.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\blasterMovement.cs" />

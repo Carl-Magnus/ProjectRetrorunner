@@ -1,0 +1,34 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BulletMovement : MonoBehaviour
+{
+    public float speed;
+    public float lifeTime;
+
+    //public GameObject destroyEffect;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        Invoke("DestroyBullet", lifeTime);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    private void FixedUpdate()
+    {
+        transform.Translate(Vector2.right * -speed * Time.deltaTime);
+    }
+
+    private void DestroyBullet()
+    {
+        //Instantiate(destroyEffect, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
+}

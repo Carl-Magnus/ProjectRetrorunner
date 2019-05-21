@@ -324,7 +324,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 1
+  m_Constraints: 5
 --- !u!61 &6410187526890650774
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -363,10 +363,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 291b0b34512975640858de43cbf657ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPosition: {fileID: 5210159961453443532, guid: 555030b894f5c0542b537204eaea0d6a,
-    type: 3}
+  bullet: {fileID: 8273718287829564363, guid: e0aefa4485791434198763cfb47afaf5, type: 3}
   canonPosition: {fileID: 3665532730163608099}
   shotPoint: {fileID: 7591712753089142710}
   rotationOffset: 0
   bulletOffSet: 0
-  startTimeBetweenShots: 0
+  startTimeBetweenShots: 0.5
