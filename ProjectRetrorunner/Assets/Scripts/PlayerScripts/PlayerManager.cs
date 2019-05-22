@@ -85,9 +85,9 @@ public class PlayerManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.G) && !movement.isDashing)
         {
+            playerAudioManager.PlayDashSound();
             movement.isDashing = true;
             attack.DashAttack();
-            playerAudioManager.PlayDashSound();
         }
     }
 
@@ -95,8 +95,8 @@ public class PlayerManager : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.L))
         {
-            attack.Attack();
             playerAudioManager.PlayAttackSound();
+            attack.Attack();
         }
         
     }

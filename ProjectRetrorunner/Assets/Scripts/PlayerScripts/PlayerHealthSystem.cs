@@ -46,4 +46,18 @@ public class PlayerHealthSystem : MonoBehaviour
             }
         }
     }
+
+    public void PlayerGetRangedDamaged()
+    {
+        if (damageCooldown < 0)
+        {
+            health--;
+            damageCooldown = damageCooldownReset;
+            playerAudioManager.PlayHitByEnemy();
+        }
+        else
+        {
+            playerIsDamaged = false;
+        }
+    }
 }

@@ -31,4 +31,25 @@ public class BulletMovement : MonoBehaviour
         //Instantiate(destroyEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Player")
+        {
+            PlayerHealthSystem player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealthSystem>();
+
+            player.playerIsDamaged = true;
+            player.PlayerGetRangedDamaged();
+
+            DestroyBullet();
+        }
+        else if (collision.collider.tag == "Enemy")
+        {
+            Physics2D.IgnoreLayerCollision(13, 13);
+        }
+        else
+        {
+            DestroyBullet();
+        }
+    }
 }

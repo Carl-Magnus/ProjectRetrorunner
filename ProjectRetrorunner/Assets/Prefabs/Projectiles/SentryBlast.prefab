@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8670807093124392088}
   - component: {fileID: 2169530435023699396}
   - component: {fileID: 7547907633776083932}
+  - component: {fileID: 1331497362637571515}
   m_Layer: 0
   m_Name: SentryBlast
   m_TagString: Untagged
@@ -92,5 +93,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a558dbd4c740d43ac8f1f98cbce79a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  lifeTime: 0.5
+  speed: 8
+  lifeTime: 2
+--- !u!61 &1331497362637571515
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8273718287829564363}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.100712135}
+  m_EdgeRadius: 0

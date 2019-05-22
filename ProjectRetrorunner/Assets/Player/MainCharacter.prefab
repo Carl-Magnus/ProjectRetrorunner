@@ -1143,11 +1143,13 @@ MonoBehaviour:
   jumpTime: 0.3
   dashTime: 0.2
   dashSpeed: 10
+  knockBackCounter: 0
   knockBackForce: 10
-  knockBackTime: 1
   isDashing: 0
   isLeftWallSliding: 0
   isRightWallSliding: 0
+  dashParticles: {fileID: 4518230642449981122, guid: 1c909046cf919c345b05019b1fe87c06,
+    type: 3}
 --- !u!114 &2726083916346822173
 MonoBehaviour:
   m_ObjectHideFlags: 0

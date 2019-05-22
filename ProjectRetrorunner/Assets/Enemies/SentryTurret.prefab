@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7591712753089142710}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ShotPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3665532730163608099}
   - component: {fileID: 1142167239498800923}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3569145468706122767}
   - component: {fileID: 5380966362408989450}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6313866380242819871}
   - component: {fileID: 6499099276435293115}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,9 +281,9 @@ GameObject:
   - component: {fileID: 4203483016561618064}
   - component: {fileID: 6410187526890650774}
   - component: {fileID: 4001566892275658580}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: SentryTurret
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -368,4 +368,4 @@ MonoBehaviour:
   shotPoint: {fileID: 7591712753089142710}
   rotationOffset: 0
   bulletOffSet: 0
-  startTimeBetweenShots: 0.5
+  startTimeBetweenShots: 2
