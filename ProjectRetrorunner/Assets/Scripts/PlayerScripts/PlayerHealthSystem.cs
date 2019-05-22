@@ -2,21 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerHealthSystem : MonoBehaviour
 {
+    private PlayerMovement playerMovement;
+
+    private PlayerAudioManager playerAudioManager;
+
+    private Image healthBar;
+
     public int health;
+    private int maxHealth;
+
     public float damageCooldown;
     private float damageCooldownReset;
+    private float maxFillAmount;
+
+
     public bool playerIsDamaged;
-    private PlayerMovement playerMovement;
-    private PlayerAudioManager playerAudioManager;
+
     // Start is called before the first frame update
     void Start()
     {
         damageCooldownReset = damageCooldown;
         playerMovement = gameObject.GetComponent<PlayerMovement>();
         playerAudioManager = gameObject.GetComponent<PlayerAudioManager>();
+        healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<Image>();
+
+        maxFillAmount = healthBar.fillAmount;
+        maxHealth = health;
     }
     // Update is called once per frame
     void Update()
@@ -39,6 +54,9 @@ public class PlayerHealthSystem : MonoBehaviour
                 playerMovement.KnockBack(direction);
                 Debug.Log("Damaged");
                 playerAudioManager.PlayHitByEnemy();
+
+                healthBar.fillAmount -= maxFillAmount / maxHealth;
+
             }
             else
             {
@@ -54,6 +72,8 @@ public class PlayerHealthSystem : MonoBehaviour
             health--;
             damageCooldown = damageCooldownReset;
             playerAudioManager.PlayHitByEnemy();
+
+            healthBar.fillAmount -= maxFillAmount / maxHealth;
         }
         else
         {
