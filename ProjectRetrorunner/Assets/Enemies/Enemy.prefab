@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1165453804}
   - component: {fileID: 622235469}
   - component: {fileID: 3912941895631365867}
+  - component: {fileID: 1705390006566792601}
   m_Layer: 13
   m_Name: Enemy
   m_TagString: Enemy
@@ -106,7 +107,8 @@ MonoBehaviour:
     m_Bits: 0
   bloodSplatter: {fileID: 8732338158471102839, guid: d2b9b7ba2b26c30439ff29fcb5616582,
     type: 3}
-  player: {fileID: 0}
+  knockBackTimer: 0.5
+  knockBackForce: 15
 --- !u!61 &1255122874497281687
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148,7 +150,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.13232791
 --- !u!114 &622235469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,6 +260,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!50 &1705390006566792601
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4311874409295270847}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &5216114027314247788
 GameObject:
   m_ObjectHideFlags: 0

@@ -36,9 +36,9 @@ public class PlayerMovement : MonoBehaviour
     public float dashTime;
     public float dashSpeed;
     private float dashTimeReset;
-    private float knockBackCounter;
+    public float knockBackCounter;
     public float knockBackForce;
-    public float knockBackTime;
+    private float knockBackTime;
 
     private bool isJumping;
     private bool isGrounded;
@@ -107,11 +107,11 @@ public class PlayerMovement : MonoBehaviour
     {
         moveInput = Input.GetAxisRaw("Horizontal");
 
-        if (isGrounded)
+        if (isGrounded && knockBackTime <= 0)
         {
             playerBody.velocity = new Vector2(moveInput * runSpeed, playerBody.velocity.y);
         }
-        else
+        else if (knockBackTime <= 0)
         {
             playerBody.velocity += new Vector2(moveInput * airSpeed, 0);
 
@@ -119,6 +119,8 @@ public class PlayerMovement : MonoBehaviour
 
             playerBody.velocity = new Vector2(x, playerBody.velocity.y);
         }
+
+        knockBackTime -= Time.deltaTime;
     }
 
     private void Jump()
@@ -265,16 +267,11 @@ public class PlayerMovement : MonoBehaviour
 
     public void KnockBack(Vector2 direction)
     {
-        if(knockBackTime > 0)
-        {
-            playerBody.velocity = direction * knockBackForce;
-            knockBackTime -= Time.deltaTime;
-        }
+        knockBackTime = 0.5f;
 
-        else
+        if (knockBackTime > 0)
         {
-            knockBackTime = knockBackCounter;
+            playerBody.velocity = new Vector2 (direction.x * knockBackForce, direction.y * knockBackForce);
         }
-        
     }
 }

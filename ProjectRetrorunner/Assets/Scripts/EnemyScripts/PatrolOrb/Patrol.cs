@@ -13,24 +13,39 @@ public class Patrol : MonoBehaviour
 
     public Transform groundDetection;
 
+    private Transform playerTransform;
+
+    private Rigidbody2D body;
+
     public LayerMask whatIsGround;
 
     public GameObject bloodSplatter;
-    public GameObject player;
+
+    private PlayerHealthSystem player;
 
     private Vector2 moveDirection;
     private PlayerMovement playerMovement;
     private EnemyAudioManager enemyAudioManager;
 
+    public float knockBackTimer;
+
+    public float knockBackForce;
+
     private void Start()
     {
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         enemyAudioManager = gameObject.GetComponent<EnemyAudioManager>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealthSystem>();
+        playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        body = gameObject.GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        if (knockBackTimer <= 0)
+        {
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
+        }
 
         Death();
 
@@ -48,10 +63,13 @@ public class Patrol : MonoBehaviour
                 movingRight = true;
             }
         }
+
+        knockBackTimer -= Time.deltaTime;
     }
 
     public void TakeDamage(int damage)
     {
+        knockBackTimer = 1f;
         Instantiate(bloodSplatter, transform.position, Quaternion.identity);
         health -= damage;
         enemyAudioManager.PlayerHitByPlayer();
@@ -63,8 +81,36 @@ public class Patrol : MonoBehaviour
         {
             Vector2 hitDirection = collision.transform.position - transform.position;
             hitDirection = hitDirection.normalized;
-            player.GetComponent<PlayerHealthSystem>().playerIsDamaged = true;
-            player.GetComponent<PlayerHealthSystem>().PlayerGetDamaged(hitDirection);
+
+            if (hitDirection.x > 0)
+            {
+                hitDirection = new Vector2(1, 1);
+
+                player.playerIsDamaged = true;
+                player.PlayerGetDamaged(hitDirection);
+            }
+
+            else if (hitDirection.x < 0)
+            {
+                hitDirection = new Vector2(-1, 1);
+
+                player.playerIsDamaged = true;
+                player.PlayerGetDamaged(hitDirection);
+            }
+        }
+
+        if (collision.collider.tag == "ground")
+        {
+            if (movingRight)
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+                movingRight = false;
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, 180, 0);
+                movingRight = true;
+            }
         }
     }
 
