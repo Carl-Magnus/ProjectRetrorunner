@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    public PlayerMovement movement;
-    public CyberBlaster blaster;
-    public PlayerAttack attack;
+    private PlayerMovement movement;
+    private CyberBlaster blaster;
+    private PlayerAttack attack;
     private PlayerAudioManager playerAudioManager;
 
     // Start is called before the first frame update
     void Start()
     {
+        movement = gameObject.GetComponent<PlayerMovement>();
+        blaster = gameObject.GetComponent<CyberBlaster>();
+        attack = gameObject.GetComponent<PlayerAttack>();
         playerAudioManager = gameObject.GetComponent<PlayerAudioManager>();
     }
 

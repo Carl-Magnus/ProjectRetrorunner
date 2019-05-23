@@ -64,7 +64,7 @@ public class RotateAim : MonoBehaviour
     {
         //Instantiate(bloodSplatter, transform.position, Quaternion.identity);
         health -= damage;
-        //soundEffect.PlayerHitByPlayer();
+        //soundEffect.EnemyHitByPlayer();
     }
 
     public void Death()

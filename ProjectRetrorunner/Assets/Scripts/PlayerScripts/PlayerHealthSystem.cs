@@ -26,8 +26,8 @@ public class PlayerHealthSystem : MonoBehaviour
     void Start()
     {
         damageCooldownReset = damageCooldown;
-        playerMovement = gameObject.GetComponent<PlayerMovement>();
-        playerAudioManager = gameObject.GetComponent<PlayerAudioManager>();
+        playerMovement = GetComponent<PlayerMovement>();
+        playerAudioManager = GetComponent<PlayerAudioManager>();
         healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<Image>();
 
         maxFillAmount = healthBar.fillAmount;

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public Rigidbody2D playerBody;
+    private Rigidbody2D playerBody;
 
     public Transform playerFeet;
     public Transform leftHand;
@@ -53,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //Hänvisar till spelarens egen animation controller
         anim = GetComponent<Animator>();
+        playerBody = GetComponent<Rigidbody2D>();
         jumpReset = extraJumps;
         dashTimeReset = dashTime;
         startRunSpeed = runSpeed;
