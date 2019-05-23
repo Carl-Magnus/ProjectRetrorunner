@@ -32,7 +32,7 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        timeBetweenAttack -= Time.deltaTime;
     }
 
     void OnDrawGizmosSelected()
@@ -62,11 +62,6 @@ public class PlayerAttack : MonoBehaviour
                     enemiesToDamage[i].GetComponent<RotateAim>().TakeDamage(damage);
                 }
             }
-        }
-
-        else
-        {
-            timeBetweenAttack -= Time.deltaTime;
         }
     }
 

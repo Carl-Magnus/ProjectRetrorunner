@@ -11,12 +11,15 @@ public class RotateAim : MonoBehaviour
 
     private EnemyAudioManager soundEffect;
 
+    public GameObject splatter;
+
     private Transform playerPosition;
     public Transform canonPosition;
     public Transform shotPoint;
 
     public int health;
 
+    public float range;
     public float rotationOffset;
     public float bulletOffSet;
     public float startTimeBetweenShots;
@@ -27,7 +30,7 @@ public class RotateAim : MonoBehaviour
     {
         body = gameObject.GetComponent<Rigidbody2D>();
         playerPosition = GameObject.FindWithTag("Player").transform;
-        soundEffect = GetComponent<EnemyAudioManager>();
+        soundEffect = gameObject.GetComponent<EnemyAudioManager>();
 
         timeBetweenShots = 0.5f;
     }
@@ -49,28 +52,33 @@ public class RotateAim : MonoBehaviour
 
     private void FireCanon()
     {
-        if (timeBetweenShots <= 0)
+        Vector2 differance = canonPosition.position - playerPosition.position;
+        if (differance.x < range && differance.y < range)
         {
-            Instantiate(bullet, shotPoint.position, canonPosition.transform.rotation);
-            timeBetweenShots = startTimeBetweenShots;
-        }
-        else
-        {
-            timeBetweenShots -= Time.deltaTime;
+            if (timeBetweenShots <= 0)
+            {
+                Instantiate(bullet, shotPoint.position, canonPosition.transform.rotation);
+                timeBetweenShots = startTimeBetweenShots;
+            }
+            else
+            {
+                timeBetweenShots -= Time.deltaTime;
+            }
         }
     }
 
     public void TakeDamage(int damage)
     {
-        //Instantiate(bloodSplatter, transform.position, Quaternion.identity);
+        Instantiate(splatter, transform.position, Quaternion.identity);
         health -= damage;
-        //soundEffect.EnemyHitByPlayer();
+        soundEffect.EnemyHitByPlayer();
     }
 
     public void Death()
     {
         if (health <= 0)
         {
+            soundEffect.EnemyHitByPlayer();
             Destroy(gameObject);
         }
     }

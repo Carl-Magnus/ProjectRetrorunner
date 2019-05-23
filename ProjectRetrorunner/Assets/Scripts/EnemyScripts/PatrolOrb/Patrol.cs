@@ -72,7 +72,7 @@ public class Patrol : MonoBehaviour
         knockBackTimer = 1f;
         Instantiate(bloodSplatter, transform.position, Quaternion.identity);
         health -= damage;
-        enemyAudioManager.PlayerHitByPlayer();
+        enemyAudioManager.EnemyHitByPlayer();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

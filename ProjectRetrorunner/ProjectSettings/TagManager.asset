@@ -11,6 +11,7 @@ TagManager:
   - HealthBar
   - Sentry
   - EnergyBar
+  - Splatter
   layers:
   - Default
   - TransparentFX
