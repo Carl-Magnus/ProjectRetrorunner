@@ -40,11 +40,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3326629782128817584}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e815d40255510f741b850c27a83d6f63, type: 3}
+  m_Script: {fileID: 11500000, guid: fcf2e7c1ab256fb49a9aad1d8cb217ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxImages:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  parallaxAmount: 2
+  parallaxAmount: 1
