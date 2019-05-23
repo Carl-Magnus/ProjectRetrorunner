@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 4001566892275658580}
   m_Layer: 13
   m_Name: SentryTurret
-  m_TagString: Enemy
+  m_TagString: Sentry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -366,6 +366,7 @@ MonoBehaviour:
   bullet: {fileID: 8273718287829564363, guid: e0aefa4485791434198763cfb47afaf5, type: 3}
   canonPosition: {fileID: 3665532730163608099}
   shotPoint: {fileID: 7591712753089142710}
+  health: 15
   rotationOffset: 0
   bulletOffSet: 0
   startTimeBetweenShots: 2

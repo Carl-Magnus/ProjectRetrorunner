@@ -44,6 +44,12 @@ public class blasterMovement : MonoBehaviour
             Physics2D.IgnoreLayerCollision(10, 12);
         }
 
+        else if (collision.collider.tag == "Sentry")
+        {
+            collision.collider.GetComponent<RotateAim>().TakeDamage(blasterDamage);
+            Destroy(gameObject);
+        }
+
         else if (collision.collider.tag == "Enemy")
         {
             collision.collider.GetComponent<Patrol>().TakeDamage(blasterDamage);

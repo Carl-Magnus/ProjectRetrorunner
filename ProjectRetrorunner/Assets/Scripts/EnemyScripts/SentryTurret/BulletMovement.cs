@@ -47,6 +47,10 @@ public class BulletMovement : MonoBehaviour
         {
             Physics2D.IgnoreLayerCollision(13, 13);
         }
+        else if (collision.collider.tag == "Sentry")
+        {
+            Physics2D.IgnoreLayerCollision(13, 13);
+        }
         else
         {
             DestroyBullet();

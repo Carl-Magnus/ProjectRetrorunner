@@ -9,6 +9,7 @@ TagManager:
   - Blast
   - Enemy
   - HealthBar
+  - Sentry
   layers:
   - Default
   - TransparentFX
