@@ -77,7 +77,7 @@ public class PlayerManager : MonoBehaviour
     //Logik för att spelaren ska kunna skjuta en CyberBlast
     private void BlasterLogic()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             blaster.Blast();
         }
@@ -85,7 +85,7 @@ public class PlayerManager : MonoBehaviour
 
     private void DashLogic()
     {
-        if (Input.GetKeyDown(KeyCode.G) && !movement.isDashing)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !movement.isDashing)
         {
             playerAudioManager.PlayDashSound();
             movement.isDashing = true;
@@ -95,7 +95,7 @@ public class PlayerManager : MonoBehaviour
 
     public void AttackLogic()
     {
-        if (Input.GetKey(KeyCode.L))
+        if (Input.GetKey(KeyCode.M))
         {
             playerAudioManager.PlayAttackSound();
             attack.Attack();

@@ -69,12 +69,19 @@ public class PlayerAttack : MonoBehaviour
     {
         if (playerMovement.isDashing == true)
         {
-
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(dashAttackPosition.position, dashAttackRange, whaIsEnemy);
 
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
-                enemiesToDamage[i].GetComponent<Patrol>().TakeDamage(damage);
+                if (enemiesToDamage[i].tag == "Enemy")
+                {
+                    enemiesToDamage[i].GetComponent<Patrol>().TakeDamage(damage);
+                }
+
+                if (enemiesToDamage[i].tag == "Sentry")
+                {
+                    enemiesToDamage[i].GetComponent<RotateAim>().TakeDamage(damage);
+                }
             }
         }
     }

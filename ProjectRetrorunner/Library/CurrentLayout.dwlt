@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 927, y: 498}
   m_MaxSize: {x: 16012, y: 14048}
   vertical: 0
-  controlID: 15571
+  controlID: 6107
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 650, y: 498}
   m_MaxSize: {x: 12010, y: 14048}
   vertical: 1
-  controlID: 15422
+  controlID: 6108
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 650, y: 224}
   m_MaxSize: {x: 12010, y: 4024}
   vertical: 0
-  controlID: 15423
+  controlID: 6109
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -408,10 +408,10 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: f02fffff
-      m_LastClickedID: -53264
-      m_ExpandedIDs: 1630ffff3c36ffffb6fbffffee390000
+      scrollPos: {x: 0, y: 8}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: cafbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -708,20 +708,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Enemies
+    - Assets/Scripts/PlayerScripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Enemies
+  - Assets/Scripts/PlayerScripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\carlm\OneDrive\Dokument\GitHub\ProjectRetrorunner\ProjectRetrorunner
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 60390000
-    m_LastClickedID: 14688
-    m_ExpandedIDs: 00000000a42a0000ce2a0000162c00003c2d00002a2f0000ec300000cc310000b83600006837000098380000683c00006a3c00006c3c000000ca9a3b
+    scrollPos: {x: 0, y: 287}
+    m_SelectedIDs: 461c0000
+    m_LastClickedID: 7238
+    m_ExpandedIDs: 00000000e20d00000c0e0000540f00007a100000681200002a1400000a150000f8190000a81a0000d81b00003c3d00003e3d0000403d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -749,7 +749,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a42a0000ce2a0000162c00003c2d00002a2f0000ec300000cc310000b83600006837000098380000683c00006a3c00006c3c000000ca9a3b
+    m_ExpandedIDs: 00000000e20d00000c0e0000540f00007a100000681200002a1400000a150000f8190000a81a0000d81b00003c3d00003e3d0000403d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

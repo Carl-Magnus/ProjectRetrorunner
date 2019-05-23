@@ -214,7 +214,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isJumping = true;
 
-            if(transform.eulerAngles.y == 0)
+            if (transform.eulerAngles.y == 0)
             {
                 playerBody.velocity = new Vector2(wallJumpClimb.x, wallJumpClimb.y);
             }
@@ -222,7 +222,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerBody.velocity = new Vector2(-wallJumpClimb.x, wallJumpClimb.y);
             }
-            
+
 
         }
 
@@ -230,7 +230,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isJumping = true;
 
-            if(transform.eulerAngles.y == 0)
+            if (transform.eulerAngles.y == 0)
             {
                 playerBody.velocity = new Vector2(-wallJumpClimb.x, wallJumpClimb.y);
             }
@@ -238,7 +238,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerBody.velocity = new Vector2(wallJumpClimb.x, wallJumpClimb.y);
             }
-        
+
         }
     }
 
@@ -272,7 +272,18 @@ public class PlayerMovement : MonoBehaviour
 
         if (knockBackTime > 0)
         {
-            playerBody.velocity = new Vector2 (direction.x * knockBackForce, direction.y * knockBackForce);
+            playerBody.velocity = new Vector2(direction.x * knockBackForce, direction.y * knockBackForce);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Enemy" || collision.collider.tag == "Sentry")
+        {
+            if (isDashing)
+            {
+                Physics2D.GetIgnoreLayerCollision(10, 13);
+            }
         }
     }
 }
