@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class EnemyAudioManager : MonoBehaviour
 {
-    public AudioClip hitByPlayer;
+    public AudioClip enemyHitByPlayer;
     private AudioSource audioSource;
 
-    public void PlayerHitByPlayer()
+    public void EnemyHitByPlayer()
     {
-        audioSource.clip = hitByPlayer;
+        audioSource.clip = enemyHitByPlayer;
         audioSource.Play();
     }
     // Start is called before the first frame update

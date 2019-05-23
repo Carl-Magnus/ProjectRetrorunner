@@ -6,6 +6,7 @@ public class BulletMovement : MonoBehaviour
 {
     public float speed;
     public float lifeTime;
+    private PlayerHealthSystem playerHealthSystem;
 
     //public GameObject destroyEffect;
 
@@ -13,6 +14,7 @@ public class BulletMovement : MonoBehaviour
     void Start()
     {
         Invoke("DestroyBullet", lifeTime);
+        playerHealthSystem = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealthSystem>();
     }
 
     // Update is called once per frame
@@ -36,10 +38,8 @@ public class BulletMovement : MonoBehaviour
     {
         if (collision.collider.tag == "Player")
         {
-            PlayerHealthSystem player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealthSystem>();
-
-            player.playerIsDamaged = true;
-            player.PlayerGetRangedDamaged();
+            playerHealthSystem.playerIsDamaged = true;
+            playerHealthSystem.PlayerGetRangedDamaged();
 
             DestroyBullet();
         }
