@@ -1138,13 +1138,13 @@ MonoBehaviour:
   jumpForce: 6
   maxWallSlideSpeed: 2.5
   feetRadiusCheck: 0.3
-  leftHandRadiusCheck: 0.5
-  rightHandRadiusCheck: 0.5
+  leftHandRadiusCheck: 0.2
+  rightHandRadiusCheck: 0.2
   jumpTime: 0.3
   dashTime: 0.2
   dashSpeed: 10
   knockBackCounter: 0
-  knockBackForce: 10
+  knockBackForce: 7
   isDashing: 0
   isLeftWallSliding: 0
   isRightWallSliding: 0
@@ -1204,6 +1204,7 @@ MonoBehaviour:
   cyberBlast: {fileID: 5833219819818551876, guid: 5394e1553f3cda242b20f94999901b71,
     type: 3}
   anim: {fileID: 1775446796402267557}
+  blasterTimer: 0
 --- !u!95 &1775446796402267557
 Animator:
   serializedVersion: 3

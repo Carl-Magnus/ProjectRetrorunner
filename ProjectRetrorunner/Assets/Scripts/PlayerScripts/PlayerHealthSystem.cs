@@ -10,7 +10,11 @@ public class PlayerHealthSystem : MonoBehaviour
 
     private PlayerAudioManager playerAudioManager;
 
+    private Transform playerTransform;
+
     private Image healthBar;
+
+    private Transform resetPoint;
 
     public int health;
     private int maxHealth;
@@ -29,6 +33,8 @@ public class PlayerHealthSystem : MonoBehaviour
         playerMovement = gameObject.GetComponent<PlayerMovement>();
         playerAudioManager = gameObject.GetComponent<PlayerAudioManager>();
         healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<Image>();
+        resetPoint = GameObject.FindGameObjectWithTag("Respawn").GetComponent<Transform>();
+        playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
         maxFillAmount = healthBar.fillAmount;
         maxHealth = health;
@@ -36,6 +42,8 @@ public class PlayerHealthSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        OutOfMap();
+
         if (health <= 0)
         {
             SceneManager.LoadScene("GameOver");
@@ -78,6 +86,17 @@ public class PlayerHealthSystem : MonoBehaviour
         else
         {
             playerIsDamaged = false;
+        }
+    }
+
+    private void OutOfMap()
+    {
+        if (playerTransform.transform.position.y < -10)
+        {
+            health--;
+            healthBar.fillAmount -= maxFillAmount / maxHealth;
+            playerTransform.transform.position = resetPoint.transform.position;
+            playerAudioManager.PlayHitByEnemy();
         }
     }
 }

@@ -77,7 +77,6 @@ public class PlayerManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             blaster.Blast();
-            playerAudioManager.PlayLaserShot();
         }
     }
 

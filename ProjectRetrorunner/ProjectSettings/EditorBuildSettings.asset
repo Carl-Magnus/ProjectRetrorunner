@@ -9,15 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/mainMenu.unity
     guid: d0bb6791e7af678408ff23107e54d0d4
   - enabled: 1
-    path: Assets/Scenes/victor_scene.unity
-    guid: 9800c7b079b90a54482c8f5fc0a3b4e3
-  - enabled: 1
-    path: Assets/Scenes/gustav_scene.unity
-    guid: d69088baad41ea94098bf0f0b422305f
+    path: Assets/Scenes/Level1.unity
+    guid: f83d66af3f5f8834d9e39932f747c5a8
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 4c6539f46d7ac794e96f2be2b9a47d38
-  - enabled: 1
+  - enabled: 0
+    path: Assets/Scenes/victor_scene.unity
+    guid: 9800c7b079b90a54482c8f5fc0a3b4e3
+  - enabled: 0
+    path: Assets/Scenes/gustav_scene.unity
+    guid: d69088baad41ea94098bf0f0b422305f
+  - enabled: 0
     path: Assets/Scenes/Testdags_scene.unity
     guid: b23d7eaedbecd804ab3f0d7d1f594516
   m_configObjects: {}

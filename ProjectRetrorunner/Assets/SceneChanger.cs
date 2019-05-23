@@ -9,11 +9,11 @@ public class SceneChanger : MonoBehaviour
    
     public void ChangeScene()
     {
-        SceneManager.LoadScene("Testdags_scene", LoadSceneMode.Single);
+        SceneManager.LoadScene("Level1", LoadSceneMode.Single);
     }
 
     public void RestartScene()
     {
-        SceneManager.LoadScene("Testdags_scene");
+        SceneManager.LoadScene("Level1");
     }
 }
